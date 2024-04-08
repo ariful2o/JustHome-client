@@ -46,7 +46,6 @@ export default function Login() {
 
     return (
         <>
-            <Navbar></Navbar>
             <ToastContainer />
             <dialog id="my_modal_3" className="modal">
                 <div className="modal-box">
