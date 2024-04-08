@@ -13,6 +13,8 @@ import Features from './pages/Features';
 import About from './pages/About';
 import Programs from './pages/Programs';
 import NewsEvents from './pages/NewsEvents';
+import Register from './pages/Register';
+import Login from './pages/Login';
 
 const router = createBrowserRouter([
   {
@@ -39,6 +41,14 @@ const router = createBrowserRouter([
       {
         path: '/newsEvents',
         element: <NewsEvents/>,
+      },
+      {
+        path: '/register',
+        element: <Register/>,
+      },
+      {
+        path: '/login',
+        element: <Login/>,
       },
     ]
   },
