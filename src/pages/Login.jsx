@@ -84,10 +84,10 @@ export default function Login() {
                                 <a onClick={()=> document.getElementById('my_modal_3').showModal()} href="#" className="label-text-alt link link-hover">Forgot password?</a>
                             </label>
                         </div>
-                        <div className="form-control mt-6">
+                        <div className="form-control mt-4">
                             <button className="btn btn-primary">Login</button>
                         </div>
-                        <p>Dont’t Have An Account ?<Link to="/register" className="text-[#F75B5F] font-bold"> Register</Link></p>
+                        <p className="text-center pt-4">Dont’t Have An Account ?<Link to="/register" className="text-[#F75B5F] font-bold"> Register</Link></p>
                     </form>
                 </div>
             </div>

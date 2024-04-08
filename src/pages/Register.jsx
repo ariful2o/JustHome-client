@@ -1,8 +1,7 @@
-import { Link, useNavigate } from "react-router-dom";
-import Navbar from "../components/Navbar";
 import { useContext, useState } from "react";
-import { AuthContext } from "../authProvider/AuthProvider";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../authProvider/AuthProvider";
 
 
 export default function Register() {
@@ -77,7 +76,7 @@ export default function Register() {
         <>
             <div className="max-h-svh  relative">
                 <div className="card shrink-0 w-full max-w-2xl shadow-2xl bg-base-100  absolute top-20 left-1/4">
-                    <h1 className="text-center text-5xl font-bold">Register your account</h1>
+                    <h1 className="text-center text-5xl font-bold pt-8">Register your account</h1>
 
                     <form className="card-body" onSubmit={handleRegister}>
                         <div className="form-control">
@@ -124,7 +123,7 @@ export default function Register() {
                         <div className="form-control mt-6">
                             <button className="btn btn-primary">Register</button>
                         </div>
-                        <p>Already Have An Account ?<Link to="/login" className="text-[#F75B5F] font-bold"> Login</Link></p>
+                        <p className="text-center py-4">Already Have An Account ?<Link to="/login" className="text-[#F75B5F] font-bold"> Login</Link></p>
                     </form>
                 </div>
             </div>
