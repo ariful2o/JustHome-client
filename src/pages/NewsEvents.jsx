@@ -1,9 +1,15 @@
-
+import {useLoaderData} from 'react-router-dom'
+import NewsCard from '../components/NewsCard'
 
 export default function NewsEvents() {
+  const news=useLoaderData()
   return (
-    <div>
-      news and events
-    </div>
+    <>
+     {
+      news.map((item)=>{
+        return <NewsCard key={item.id} item={item}></NewsCard>
+      })
+     }
+    </>
   )
 }

@@ -73,7 +73,6 @@ export default function Register() {
 
 
     return (
-        <>
             <div className="max-h-svh  relative">
                 <div className="card shrink-0 w-full max-w-2xl shadow-2xl bg-base-100  absolute top-20 left-1/4">
                     <h1 className="text-center text-5xl font-bold pt-8">Register your account</h1>
@@ -127,6 +126,5 @@ export default function Register() {
                     </form>
                 </div>
             </div>
-        </>
     )
 }
