@@ -1,10 +1,11 @@
-
+import PropTypes from 'prop-types';
 export default function NewsCard({ item }) {
 
     const { blog_image, estate_title, description, author_name, segment_name, date } = item;
 
     console.log(blog_image)
-    return (<>
+    return (
+    <>
         <img className="w-full p-10" src={blog_image} alt="" />
         <div className="flex gap-8 p-4">
             <h3 className=""><span className="font-bold text-3xl">02</span><br /> JUN</h3>
@@ -17,4 +18,7 @@ export default function NewsCard({ item }) {
         <button className="btn btn-error ml-3 text-white rounded-3xl">Read More</button>
     </>
     )
+}
+NewsCard.propTypes={
+    item:PropTypes.object.isRequired
 }
