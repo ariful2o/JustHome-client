@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 export default function Banner() {
     return (
@@ -8,7 +9,7 @@ export default function Banner() {
                 <p className="text-3xl italic text-[#162C5A] mb-10 font-sotify">Make a difference in the life of a child with special needs, create an inclusive community and improve yourself!</p>
                 <small className="block max-w-sm">Types of special needs vary in severity. People with autism, Down syndrome, dyslexia, blindness, ADHD, or cystic fibrosis, for example, may be considered to have special needs. However, special needs can also include cleft lips, or missing limbs.</small>
                 </div>
-                <button className="btn bg-[#FFD122] rounded-3xl my-10">MORE ABOUT US</button>
+                <Link to='/about' className="btn bg-[#FFD122] rounded-3xl my-10">MORE ABOUT US</Link>
             </div>
             <div className="text-center max-w-2xl shadow">
                 <img className="mx-auto" src={'https://lighthouse.ancorathemes.com/wp-content/uploads/2017/06/lighthouse.png'} alt="" />

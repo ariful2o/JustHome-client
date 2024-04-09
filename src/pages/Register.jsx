@@ -120,7 +120,7 @@ export default function Register() {
 
                         </div>
                         <div className="form-control mt-6">
-                            <button className="btn btn-primary">Register</button>
+                            <button className="btn btn-primary opacity-70">Register</button>
                         </div>
                         <p className="text-center py-4">Already Have An Account ?<Link to="/login" className="text-[#F75B5F] font-bold"> Login</Link></p>
                     </form>

@@ -1,14 +1,14 @@
-import { Link, useNavigate } from "react-router-dom";
-import Navbar from "../components/Navbar";
 import { useContext, useState } from "react";
-import { AuthContext } from "../authProvider/AuthProvider";
+import { FaGithub, FaGoogle } from "react-icons/fa";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
+import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
-  import 'react-toastify/dist/ReactToastify.css';
+import 'react-toastify/dist/ReactToastify.css';
+import { AuthContext } from "../authProvider/AuthProvider";
 
 
 export default function Login() {
-    const { loginUser } = useContext(AuthContext)
+    const { loginUser,loginWithGoogle,loginWithgithub } = useContext(AuthContext)
     const [showPassword, setShowPassword] = useState(true)
     const navigate = useNavigate()
 
@@ -31,7 +31,7 @@ export default function Login() {
             .catch((err) => toast.error(err.message))
     }
     //forgat password
-    
+
     // const handleForgetPassword = (e) => {
     //     const email = e.target.forgetmail.value
     //     forgetPassword(email)
@@ -52,11 +52,11 @@ export default function Login() {
                     <form method="dialog" >
                         {/* if there is a button in form, it will close the modal */}
                         <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
-                    <h3 className="font-bold text-lg my-3">Hello!</h3>
-                    <label className="input input-bordered flex items-center gap-2">
-                        <input name="forgetmail" type="text" className="grow" placeholder="Enter your Email" />
-                        <button className="badge badge-info py-4 px-4">Send</button>
-                    </label>
+                        <h3 className="font-bold text-lg my-3">Hello!</h3>
+                        <label className="input input-bordered flex items-center gap-2">
+                            <input name="forgetmail" type="text" className="grow" placeholder="Enter your Email" />
+                            <button className="badge badge-info py-4 px-4">Send</button>
+                        </label>
                     </form>
 
                 </div>
@@ -76,19 +76,28 @@ export default function Login() {
                                 <span className="label-text">Password</span>
                             </label>
                             <input name="password" type={!showPassword ? "text" : "password"} placeholder="Enter your password" className="input input-bordered" required />
-                            <div className="absolute right-10 top-1/2">
+                            <div className="absolute right-10 bottom-1/2">
                                 {showPassword ? <span onClick={handleShowPassWord}><FaRegEye /></span> : <span onClick={handleShowPassWord}><FaRegEyeSlash /></span>
                                 }
                             </div>
                             <label className="label">
-                                <a onClick={()=> document.getElementById('my_modal_3').showModal()} href="#" className="label-text-alt link link-hover">Forgot password?</a>
+                                <a onClick={() => document.getElementById('my_modal_3').showModal()} href="#" className="label-text-alt link link-hover">Forgot password?</a>
                             </label>
                         </div>
-                        <div className="form-control mt-4">
+                        <div className="form-control mt-4 opacity-60">
                             <button className="btn btn-primary">Login</button>
                         </div>
                         <p className="text-center pt-4">Dont’t Have An Account ?<Link to="/register" className="text-[#F75B5F] font-bold"> Register</Link></p>
                     </form>
+                        <div className="flex mx-auto gap-4">
+                            <button onClick={loginWithGoogle} className="btn text-accent bg-red-100">
+                            <FaGoogle />
+                            Login With Google
+                        </button>
+                        <button onClick={loginWithgithub} className="btn text-secondary bg-slate-200">
+                            <FaGithub />
+                            Login With GitHub
+                        </button></div>
                 </div>
             </div>
         </>

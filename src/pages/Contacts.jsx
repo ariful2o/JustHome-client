@@ -1,9 +1,10 @@
+import ComminBanner from "../components/ComminBanner";
 
 
 export default function Contacts() {
   return (
     <div>
-      Contack
+      <ComminBanner location={'Contacts'}></ComminBanner>
     </div>
   )
 }

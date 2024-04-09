@@ -1,9 +1,10 @@
+import ComminBanner from "../components/ComminBanner";
 
 
 export default function Programs() {
   return (
     <div>
-      Programs
+      <ComminBanner location={'Programs'}></ComminBanner>
     </div>
   )
 }

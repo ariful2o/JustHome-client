@@ -1,7 +1,12 @@
 import BannerImg from "../components/BannerImg";
 import GoogleMapReact from 'google-map-react';
+import PropTypes from 'prop-types';
+import ComminBanner from "../components/ComminBanner";
+
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
+
+
 export default function About() {
 
   const defaultProps = {
@@ -13,6 +18,8 @@ export default function About() {
   };
   return (
     <>
+    <ComminBanner location={'About'}></ComminBanner>
+    
       <div className="flex flex-col lg:flex-row p-10 mx-auto">
         <div className="max-w-2xl p-20">
           <h1 className="text-5xl font-bold text-[#43CEC6] my-20">SAY HELLO!</h1>
@@ -98,7 +105,7 @@ export default function About() {
         </div>
       </div>
 
-      <div className=" bg-base-200 ">
+      <div className=" bg-base-200 p-8">
         <div className="flex flex-col lg:flex-row-reverse justify-center items-center gap-10">
           <div className="p-9" style={{ height: '100vh', width: '50%' }}>
             <GoogleMapReact
@@ -116,7 +123,7 @@ export default function About() {
 
           <div className="">
             <h1 className="text-5xl font-bold text-[#43CEC6]">CONTACT INFO</h1>
-            <p className="py-6 mb-20 text-[#162C5A] text-4xl font-semibold">We are a non-profit organization.<br />
+            <p className="py-6 mb-20 text-[#162C5A] text-3xl font-semibold">We are a non-profit organization.<br />
               Our goal is to provide help</p>
 
             <label htmlFor="address">ADDRESS</label>
@@ -133,3 +140,7 @@ export default function About() {
     </>
   )
 }
+
+AnyReactComponent.propTypes = {
+  text: PropTypes.string.isRequired,
+};

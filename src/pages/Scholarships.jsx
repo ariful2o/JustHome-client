@@ -1,10 +1,11 @@
+import ComminBanner from "../components/ComminBanner";
 
 
 export default function Scholarships() {
   return (
     <div>
-      Scholarships
-
+      <ComminBanner location={'Scholarships'}></ComminBanner>
     </div>
+
   )
 }

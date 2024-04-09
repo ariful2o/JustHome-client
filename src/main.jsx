@@ -16,6 +16,7 @@ import NewsEvents from './pages/NewsEvents';
 import Register from './pages/Register';
 import Login from './pages/Login';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
+import NewsDetails from './components/NewsDetails';
 
 const router = createBrowserRouter([
   {
@@ -29,29 +30,34 @@ const router = createBrowserRouter([
       },
       {
         path: '/features',
-        element: <Features/>,
+        element: <Features />,
       },
       {
         path: '/about',
-        element: <About/>,
+        element: <About />,
       },
       {
         path: '/programs',
-        element: <Programs/>,
+        element: <Programs />,
       },
       {
         path: '/newsEvents',
-        element: <PrivateRoute><NewsEvents/></PrivateRoute>,
-        loader:()=>fetch('news.json'),
+        element: <PrivateRoute><NewsEvents /></PrivateRoute>,
+        loader: () => fetch('./news.json'),
       },
       {
         path: '/register',
-        element: <Register/>,
+        element: <Register />,
       },
       {
         path: '/login',
-        element: <Login/>,
+        element: <Login />,
       },
+      {
+        path: '/newsEvents/:id',
+        element: <PrivateRoute><NewsDetails /></PrivateRoute>,
+        loader: () => fetch('../news.json'),
+      }
     ]
   },
 ]);
