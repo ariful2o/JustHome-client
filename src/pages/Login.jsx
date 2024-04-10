@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { FaGithub, FaGoogle } from "react-icons/fa";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate,useLocation } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { AuthContext } from "../authProvider/AuthProvider";
@@ -11,6 +11,8 @@ export default function Login() {
     const { loginUser,loginWithGoogle,loginWithgithub } = useContext(AuthContext)
     const [showPassword, setShowPassword] = useState(true)
     const navigate = useNavigate()
+    const location=useLocation()
+    console.log(location)
 
     const handleShowPassWord = () => {
         setShowPassword(!showPassword)
@@ -26,7 +28,7 @@ export default function Login() {
             .then(result => {
                 // const usr = result.user
                 e.target.reset()
-                navigate('/')
+                navigate(location?.state?location.state:'/')
             })
             .catch((err) => toast.error(err.message))
     }

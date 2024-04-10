@@ -60,7 +60,7 @@ export default function Register() {
     //password type chenk strong
     const strongPasswordck = (event) => {
         const password = event.target.value
-        let regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@.#$!%*?&^])[A-Za-z\d@.#$!%*?&]{6,15}$/;
+        let regex =/^(?=.*[A-Z])(?=.*\d)(?=.*[^\w\s]).+$/;
 
         if (!regex.test(password)) {
             setWeekPassword(`You Password so week`)
