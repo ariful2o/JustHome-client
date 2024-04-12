@@ -39,35 +39,37 @@ export default function AuthProvider({ children }) {
     setLoading(true)
     return signInWithPopup(auth, GithubProvider)
   }
+  // get current user
 
 
+//--------
   useEffect(() => {
-    const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
-      setUser(currentUser)
-      setLoading(false)
-      console.log('>----------->', currentUser)
-    })
-    return () => unSubscribe()
-  }, [user])
+      const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
+        setUser(currentUser)
+        setLoading(false)
+        console.log('>----------->', currentUser)
+      })
+      return () => unSubscribe()
+    }, [user])
 
 
   const AuthInfo = {//auth informations
-    user,
-    registerUser,
-    loginUser,
-    signout,
-    forgetPassword,
-    loginWithGoogle,
-    loginWithgithub,
-    loading
+      user,
+      registerUser,
+      loginUser,
+      signout,
+      forgetPassword,
+      loginWithGoogle,
+      loginWithgithub,
+      loading
+    }
+    return (
+      <AuthContext.Provider value={AuthInfo}>
+        {children}
+      </AuthContext.Provider>
+    )
   }
-  return (
-    <AuthContext.Provider value={AuthInfo}>
-      {children}
-    </AuthContext.Provider>
-  )
-}
 
-AuthProvider.propTypes = {
-  children: PropTypes.node.isRequired,
-};
+  AuthProvider.propTypes = {
+    children: PropTypes.node.isRequired,
+  };

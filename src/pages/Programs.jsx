@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import ComminBanner from "../components/ComminBanner";
-import { useLoaderData } from 'react-router-dom'
+import { NavLink, useLoaderData } from 'react-router-dom'
+import './Programs.css'
 
 
 export default function Programs() {
   const programs = useLoaderData();
-  const [program,setProgram]=useState([])
+  const [program, setProgram] = useState([])
 
   useEffect(() => {
     // This function will be called when the component is mounted
@@ -15,14 +16,27 @@ export default function Programs() {
   const handleSort = (sort) => {
     setProgram(programs)
     if (sort) {
-      let soryBy=programs.filter((sItem)=>sItem.category===sort)
+      let soryBy = programs.filter((sItem) => sItem.category === sort)
       setProgram(soryBy)
     }
-    if(sort==='all'){
+    if (sort === 'all') {
       setProgram(programs)
     }
   }
-  
+
+
+
+
+  const navlinks = <>
+    <NavLink onClick={() => handleSort('all')} activeClassName="active" className="btn  rounded-3xl">All Programs</NavLink>
+
+    <NavLink onClick={() => handleSort('Family')} activeClassName="active" className="btn rounded-3xl">Family</NavLink>
+
+    <NavLink onClick={() => handleSort('Volunteers')} activeClassName="active" className="btn rounded-3xl">Volunteers</NavLink>
+
+    <NavLink onClick={() => handleSort('Community')} activeClassName="active" className="btn  rounded-3xl">Community</NavLink>
+
+  </>
   return (
     <div>
       <ComminBanner location={'Programs'}></ComminBanner>
@@ -30,10 +44,7 @@ export default function Programs() {
       <p className="text-3xl italic mb-10 font-sotify text-[#162C5A] text-center">Make a difference life of a <br />child with special needs</p>
 
       <div className="justify-center flex w-full gap-4 my-20">
-        <button onClick={()=>handleSort('all')} className="btn btn-warning rounded-3xl">All Programs</button>
-        <button onClick={()=>handleSort('Family')} className="btn btn-warning rounded-3xl">Family</button>
-        <button onClick={()=>handleSort('Volunteers')} className="btn btn-warning rounded-3xl">Volunteers</button>
-        <button onClick={()=>handleSort('Community')} className="btn btn-warning rounded-3xl">Community</button>
+        {navlinks}
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 my-10">
         {

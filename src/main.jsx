@@ -18,6 +18,7 @@ import Login from './pages/Login';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
 import NewsDetails from './components/NewsDetails';
 import Scholarships from './pages/Scholarships';
+import Profile from './pages/Profile';
 
 const router = createBrowserRouter([
   {
@@ -63,6 +64,10 @@ const router = createBrowserRouter([
       {
         path:'/scholarships',
         element:<Scholarships/>
+      },
+      {
+        path: '/profile',
+        element: <Profile />,
       }
     ]
   },
