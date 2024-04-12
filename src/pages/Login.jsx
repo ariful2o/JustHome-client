@@ -1,18 +1,17 @@
 import { useContext, useState } from "react";
 import { FaGithub, FaGoogle } from "react-icons/fa";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
-import { Link, useNavigate,useLocation } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { AuthContext } from "../authProvider/AuthProvider";
 
 
 export default function Login() {
-    const { loginUser,loginWithGoogle,loginWithgithub } = useContext(AuthContext)
+    const { loginUser, loginWithGoogle, loginWithgithub } = useContext(AuthContext)
     const [showPassword, setShowPassword] = useState(true)
     const navigate = useNavigate()
-    const location=useLocation()
-    console.log(location)
+    const location = useLocation()
 
     const handleShowPassWord = () => {
         setShowPassword(!showPassword)
@@ -25,10 +24,10 @@ export default function Login() {
         const password = form.get('password')
 
         loginUser(email, password)
-            .then(result => {
+            .then(() => {
                 // const usr = result.user
                 e.target.reset()
-                navigate(location?.state?location.state:'/')
+                navigate(location?.state ? location.state : '/')
             })
             .catch((err) => toast.error(err.message))
     }
@@ -44,6 +43,17 @@ export default function Login() {
     //     })
     //     .catch(err=>toast.error(err))
     // }
+
+    const handleGoogleLogin = () => {
+        loginWithGoogle()
+            .then(() => toast('Log in successfull'))
+            .catch(err => toast.error(err))
+    }
+    const handleGithubLogin = () => {
+        loginWithgithub()
+            .then(() => toast('Log in successfull'))
+            .catch(err => toast.error(err))
+    }
 
 
     return (
@@ -83,7 +93,7 @@ export default function Login() {
                                 }
                             </div>
                             <label className="label">
-                                <a onClick={() => document.getElementById('my_modal_3').showModal()} href="#" className="label-text-alt link link-hover">Forgot password?</a>
+                                <a onClick={handleGoogleLogin} href="#" className="label-text-alt link link-hover">Forgot password?</a>
                             </label>
                         </div>
                         <div className="form-control mt-4 opacity-60">
@@ -91,12 +101,12 @@ export default function Login() {
                         </div>
                         <p className="text-center pt-4">Dont’t Have An Account ?<Link to="/register" className="text-[#F75B5F] font-bold"> Register</Link></p>
                     </form>
-                        <div className="flex mx-auto gap-4">
-                            <button onClick={loginWithGoogle} className="btn text-accent bg-red-100">
+                    <div className="flex mx-auto gap-4">
+                        <button onClick={handleGoogleLogin} className="btn text-accent bg-red-100">
                             <FaGoogle />
                             Login With Google
                         </button>
-                        <button onClick={loginWithgithub} className="btn text-secondary bg-slate-200">
+                        <button onClick={handleGithubLogin} className="btn text-secondary bg-slate-200">
                             <FaGithub />
                             Login With GitHub
                         </button></div>

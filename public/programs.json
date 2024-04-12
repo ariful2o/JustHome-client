@@ -1,0 +1,51 @@
+[
+    {
+      "id": 1,
+      "title": "Parents Programs",
+      "image": "https://lighthouse.ancorathemes.com/wp-content/uploads/2017/06/program4-1170x658.jpg",
+      "icon": "https://img.icons8.com/ios/50/happy--v2.png" 
+    },
+    
+    {
+      "id": 2,
+      "title": "Art & Yaga",
+      "image": "https://lighthouse.ancorathemes.com/wp-content/uploads/2017/06/program2-1170x658.jpg",
+      "icon": "https://img.icons8.com/external-ddara-flat-ddara/64/external-yoga-pose-yoga-poses-ddara-flat-ddara-36.png"
+    },
+    {
+      "id": 3,
+      "title": "Music, Dance",
+      "image": "https://lighthouse.ancorathemes.com/wp-content/uploads/2017/06/program1-1170x658.jpg",
+      "icon": "https://img.icons8.com/ios/50/theatre-mask.png"
+    },
+    {
+      "id": 4,
+      "title": "Feen Club",
+      "image": "https://lighthouse.ancorathemes.com/wp-content/uploads/2017/06/event-4-1170x658.jpg",
+      "icon": "https://img.icons8.com/plasticine/100/love-message.png"
+    },
+    {
+      "id": 5,
+      "title": "SunDay circle",
+      "image": "https://lighthouse.ancorathemes.com/wp-content/uploads/2017/06/post-5-1170x658.jpg",
+      "icon": "https://img.icons8.com/bubbles/50/full-trash.png"
+    },
+    {
+      "id": 6,
+      "title": "Sports Programs",
+      "image": "https://lighthouse.ancorathemes.com/wp-content/uploads/2017/06/program5-1170x658.jpg",
+      "icon": "https://img.icons8.com/external-flat-amoghdesign/32/external-ball-olympic-games-flat-amoghdesign-2.png"
+    },
+    {
+      "id": 7,
+      "title": "Janior Chefs",
+      "image": "https://lighthouse.ancorathemes.com/wp-content/uploads/2017/06/program6-1170x658.jpg",
+      "icon": "https://img.icons8.com/color-glass/48/light-automation.png"
+    },
+    {
+      "id": 8,
+      "title": "Dad's Night Out",
+      "image": "https://lighthouse.ancorathemes.com/wp-content/uploads/2017/06/post-14-1170x658.jpg",
+      "icon": "https://img.icons8.com/ios/50/cool--v3.png"
+    }
+  ]

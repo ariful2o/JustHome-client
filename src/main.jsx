@@ -17,6 +17,7 @@ import Register from './pages/Register';
 import Login from './pages/Login';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
 import NewsDetails from './components/NewsDetails';
+import Scholarships from './pages/Scholarships';
 
 const router = createBrowserRouter([
   {
@@ -39,6 +40,7 @@ const router = createBrowserRouter([
       {
         path: '/programs',
         element: <Programs />,
+        loader:()=>fetch('./programs.json')
       },
       {
         path: '/newsEvents',
@@ -57,6 +59,10 @@ const router = createBrowserRouter([
         path: '/newsEvents/:id',
         element: <PrivateRoute><NewsDetails /></PrivateRoute>,
         loader: () => fetch('../news.json'),
+      },
+      {
+        path:'/scholarships',
+        element:<Scholarships/>
       }
     ]
   },
