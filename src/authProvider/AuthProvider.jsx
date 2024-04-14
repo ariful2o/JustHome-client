@@ -41,15 +41,7 @@ export default function AuthProvider({ children }) {
     return signInWithPopup(auth, GithubProvider)
   }
   
-  // get current user update
-  updateProfile(auth.currentUser, {
-    displayName: "Jane Q. User", photoURL: "https://example.com/jane-q-user/profile.jpg"
-}).then(() => {
-    // Profile updated!
-    // ...
-}).catch((error) => {
-    console.log(error)
-});
+
 
 //--------
   useEffect(() => {

@@ -4,14 +4,14 @@
     "title": "Parents Programs",
     "image": "https://lighthouse.ancorathemes.com/wp-content/uploads/2017/06/program4-1170x658.jpg",
     "icon": "https://img.icons8.com/ios/50/happy--v2.png",
-    "category": "Parenting"
+    "category": "Family"
   },
   {
     "id": 2,
     "title": "Art & Yoga",
     "image": "https://lighthouse.ancorathemes.com/wp-content/uploads/2017/06/program2-1170x658.jpg",
     "icon": "https://img.icons8.com/external-ddara-fill-ddara/64/external-yoga-yoga-poses-ddara-fill-ddara-35.png",
-    "category": "Health & Wellness"
+    "category": "Volunteers"
   },
   {
     "id": 3,
@@ -25,7 +25,7 @@
     "title": "Feen Club",
     "image": "https://lighthouse.ancorathemes.com/wp-content/uploads/2017/06/event-4-1170x658.jpg",
     "icon": "https://img.icons8.com/plasticine/100/love-message.png",
-    "category": "Social"
+    "category": "Community"
   },
   {
     "id": 5,
@@ -39,21 +39,21 @@
     "title": "Sports Programs",
     "image": "https://lighthouse.ancorathemes.com/wp-content/uploads/2017/06/program5-1170x658.jpg",
     "icon": "https://img.icons8.com/external-flat-amoghdesign/32/external-ball-olympic-games-flat-amoghdesign-2.png",
-    "category": "Sports & Recreation"
+    "category": "Volunteers"
   },
   {
     "id": 7,
     "title": "Junior Chefs",
     "image": "https://lighthouse.ancorathemes.com/wp-content/uploads/2017/06/program6-1170x658.jpg",
     "icon": "https://img.icons8.com/color-glass/48/light-automation.png",
-    "category": "Culinary"
+    "category": "Community"
   },
   {
     "id": 8,
     "title": "Dad's Night Out",
     "image": "https://lighthouse.ancorathemes.com/wp-content/uploads/2017/06/post-14-1170x658.jpg",
     "icon": "https://img.icons8.com/ios/50/cool--v3.png",
-    "category": "Social"
+    "category": "Family"
   },
   {
     "id": 9,
@@ -62,15 +62,9 @@
     "icon": "https://img.icons8.com/ios/50/concerned-face.png",
     "category": "Family"
   },
+
   {
     "id": 10,
-    "title": "Volunteer Clean-up",
-    "image": "https://example.com/image10.jpg",
-    "icon": "https://example.com/icon10.png",
-    "category": "Volunteers"
-  },
-  {
-    "id": 11,
     "title": "Community Potluck",
     "image": "https://example.com/image11.jpg",
     "icon": "https://example.com/icon11.png",

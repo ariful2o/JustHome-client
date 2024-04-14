@@ -104,8 +104,9 @@ export default function About() {
       <div className=" bg-base-200 p-8">
         <div className="grid grid-cols-1 lg:grid-cols-5 justify-center items-center lg:gap-10">
 
-
-          <Map />
+          <div className="lg:p-9 col-span-3">
+            <Map />
+          </div>
 
           <div className="col-span-2 my-8">
             <h1 className="text-3xl lg:text-5xl font-bold text-[#43CEC6] m4">CONTACT INFO</h1>

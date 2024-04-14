@@ -97,16 +97,16 @@ export default function Login() {
                             </label>
                         </div>
                         <div className="form-control mt-4 opacity-60">
-                            <button className="btn btn-primary">Login</button>
+                            <button className="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Login</button>
                         </div>
                         <p className="text-center pt-4">Dont’t Have An Account ?<Link to="/register" className="text-[#F75B5F] font-bold"> Register</Link></p>
                     </form>
                     <div className="flex mx-auto gap-4">
-                        <button onClick={handleGoogleLogin} className="btn text-accent bg-red-100">
+                        <button onClick={handleGoogleLogin} className="text-white bg-[#3b5998] hover:bg-[#3b5998]/90 focus:ring-4 focus:outline-none focus:ring-[#3b5998]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#3b5998]/55 me-2 mb-2 gap-2">
                             <FaGoogle />
                             Login With Google
                         </button>
-                        <button onClick={handleGithubLogin} className="btn text-secondary bg-slate-200">
+                        <button onClick={handleGithubLogin} className="text-white bg-[#1da1f2] hover:bg-[#1da1f2]/90 focus:ring-4 focus:outline-none focus:ring-[#1da1f2]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#1da1f2]/55 me-2 mb-2 gap-2">
                             <FaGithub />
                             Login With GitHub
                         </button></div>
@@ -115,6 +115,3 @@ export default function Login() {
         </>
     )
 }
-
-
-

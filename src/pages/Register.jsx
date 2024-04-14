@@ -1,16 +1,21 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../authProvider/AuthProvider";
+import { updateProfile } from "firebase/auth";
+import auth from "../firebase/firebase.init";
 
 
 export default function Register() {
+    const {user}=useContext(AuthContext)
     const { registerUser } = useContext(AuthContext)
     const [errorpassword, setErrorPassword] = useState(null)
     const [checkbox, setCheckboox] = useState(null)
     const [weekPassword, setWeekPassword] = useState(null)
     const [showPassword, setShowPassword] = useState(true)
     const navigate = useNavigate()
+    const [name,setName]=useState(null)
+    const [photoURL,setPhotoURL]=useState(null)
 
     const handleShowPassWord = () => {
         setShowPassword(!showPassword)
@@ -26,6 +31,8 @@ export default function Register() {
         const password = form.get('password')
         const confirmpassword = form.get('confirmpassword')
         const checked = e.target.checked.checked;
+        setName(name);
+        setPhotoURL(photo);
 
         if (password !== confirmpassword) {
             setErrorPassword(`Confirm Password don't match`)
@@ -51,10 +58,26 @@ export default function Register() {
                 // const usr = result.user
                 e.target.reset()
                 navigate('/')
+                //update data
+
+                
             })
             .catch((err) => console.log(err))
     }
 
+    useEffect(()=>{
+     
+        updateProfile(auth.currentUser, {
+            displayName: name, photoURL: photoURL,
+          }).then(() => {
+            // Profile updated!
+            console.log('Profile updated!')
+            // ...
+          }).catch((error) => {
+            // An error occurred
+            // ...
+          });
+    },[user])
 
 
     //password type chenk strong
@@ -120,7 +143,7 @@ export default function Register() {
 
                         </div>
                         <div className="form-control mt-6">
-                            <button className="btn btn-primary opacity-70">Register</button>
+                            <button className="text-gray-900 bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Register</button>
                         </div>
                         <p className="text-center py-4">Already Have An Account ?<Link to="/login" className="text-[#F75B5F] font-bold"> Login</Link></p>
                     </form>
@@ -128,3 +151,4 @@ export default function Register() {
             </div>
     )
 }
+
