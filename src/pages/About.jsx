@@ -1,7 +1,9 @@
-import BannerImg from "../components/BannerImg";
-import GoogleMapReact from 'google-map-react';
+import { Marker, Popup } from "leaflet";
 import PropTypes from 'prop-types';
+import { MapContainer, TileLayer } from 'leaflet';
+import BannerImg from "../components/BannerImg";
 import ComminBanner from "../components/ComminBanner";
+import Map from "../components/Map";
 
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
@@ -9,13 +11,7 @@ const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
 export default function About() {
 
-  const defaultProps = {
-    center: {
-      lat: 10.99835602,
-      lng: 77.01502627
-    },
-    zoom: 14
-  };
+
   return (
     <>
       <ComminBanner location={'About'}></ComminBanner>
@@ -107,19 +103,9 @@ export default function About() {
 
       <div className=" bg-base-200 p-8">
         <div className="grid grid-cols-1 lg:grid-cols-5 justify-center items-center lg:gap-10">
-          <div className="lg:p-9 col-span-3" style={{ height: '100%', width: '100%' }}>
-            <GoogleMapReact
-              bootstrapURLKeys={{ key: "" }}
-              defaultCenter={defaultProps.center}
-              defaultZoom={defaultProps.zoom}
-            >
-              <AnyReactComponent
-                lat={59.955413}
-                lng={30.337844}
-                text="Our School"
-              />
-            </GoogleMapReact>
-          </div>
+
+
+          <Map />
 
           <div className="col-span-2 my-8">
             <h1 className="text-3xl lg:text-5xl font-bold text-[#43CEC6] m4">CONTACT INFO</h1>

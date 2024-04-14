@@ -1,14 +1,14 @@
 import { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../authProvider/AuthProvider";
-import '../pages/Programs.css'
 import auth from "../firebase/firebase.init";
+import '../pages/Programs.css';
 
 export default function Navbar() {
     const { user, signout } = useContext(AuthContext);
     const [theme, setTheme] = useState('light');
-    const [name,setName]=useState('')
-    const [url,setUrl]=useState('')
+    const [name, setName] = useState('')
+    const [url, setUrl] = useState('')
 
     const handleThemes = (e) => {
         if (e.target.checked) {
@@ -18,10 +18,7 @@ export default function Navbar() {
         }
     };
 
-    useEffect(() => {
-        document.querySelector('html').setAttribute('data-theme', theme);
-    }, [theme]);
-
+    //navlinks
     const navlinks = <>
         <NavLink exact to='/' activeClassName="active" >Home</NavLink>
         <NavLink to='/features' activeClassName="active" >Features</NavLink>
@@ -33,32 +30,30 @@ export default function Navbar() {
         }
     </>
 
+    //theme change
+    useEffect(() => {
+        document.querySelector('html').setAttribute('data-theme', theme);
+    }, [theme]);
+    
+    //profile image show 
+    useEffect(() => {
+        const userr = auth.currentUser;
+        if (userr !== null) {
+            user.providerData.forEach((profile) => {
+
+                if (profile.displayName) {
+                    const initials = profile.displayName
+                        .split(" ") // Split the string 
+                        .map(word => word.charAt(0).toUpperCase())
+                        .join("");
+                    profile.photoURL ? setUrl(profile.photoURL) : setName(initials)
+                }
 
 
-useEffect(()=>{
-    const userr = auth.currentUser;
-    if (userr !== null) {
-        user.providerData.forEach((profile) => {
-            // console.log("Sign-in provider: " + profile.providerId);
-            // console.log("  Provider-specific UID: " + profile.uid);
-            // console.log("  Name: " + profile.displayName);
-            // console.log("  Email: " + profile.email);
-            console.log("  Photo URL: " + profile.photoURL);
-            
-            
-            if(profile.displayName){
-                const initials = profile.displayName
-            .split(" ") // Split the string into an array of words
-            .map(word => word.charAt(0).toUpperCase())
-            .join(""); 
-            profile.photoURL?setUrl(profile.photoURL):setName(initials)
-            }
-            
-            
-        });
-    }
+            });
+        }
 
-},[user])
+    }, [user])
 
     return (
         <div className="navbar bg-base-100">
@@ -67,7 +62,7 @@ useEffect(()=>{
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </div>
-                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 uppercase font-bold">
+                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 uppercase">
                         {navlinks}
                     </ul>
                 </div>
@@ -80,7 +75,7 @@ useEffect(()=>{
                 </div>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1 font-bold uppercase gap-5 items-center">
+                <ul className="menu menu-horizontal px-1 uppercase gap-5 items-center">
                     {navlinks}
                 </ul>
             </div>
@@ -91,10 +86,10 @@ useEffect(()=>{
                     <svg className="col-start-2 row-start-1 stroke-base-100 fill-base-100" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
                 </label>
                 {user &&
-                    <NavLink to='/profile' className="avatar  placeholder ml-4 relative ">
-                        <div className="bg-neutral text-neutral-content rounded-full w-12 opacity-70 ">
+                    <NavLink to='/profile' style={{ backgroundColor: "#fff" }} className="avatar  placeholder ml-4 relative ">
+                        <div className="bg-neutral text-neutral-content rounded-full w-12 opacity-80 ">
                             {
-                                url?<img src={url} alt="" />:<span className="text-xl">{name}</span>
+                                url ? <img src={url} alt="" /> : <span className="text-xl">{name}</span>
                             }
                         </div>
                         <span className="absolute top-0 left-9 flex h-3 w-3">

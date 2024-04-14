@@ -74,7 +74,7 @@ export default function Login() {
                 </div>
             </dialog>
             <div className="max-h-svh  relative">
-                <div className="card shrink-0 w-full max-w-2xl shadow-2xl bg-base-100  absolute top-32 left-1/4 py-10">
+                <div className="card shrink-0 w-full max-w-2xl shadow-2xl bg-base-100   top-32 left-1/4 py-10">
                     <h1 className="text-center text-5xl font-bold">Login your account</h1>
                     <form className="card-body" onSubmit={handleLogIn}>
                         <div className="form-control">

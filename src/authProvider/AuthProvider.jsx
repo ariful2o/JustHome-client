@@ -2,6 +2,7 @@ import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword,
 import { createContext, useEffect, useState } from "react"
 import auth from "../firebase/firebase.init"
 import { PropTypes } from "prop-types"
+import { updateProfile } from "firebase/auth";
 
 export const AuthContext = createContext(null)
 export default function AuthProvider({ children }) {
@@ -39,8 +40,16 @@ export default function AuthProvider({ children }) {
     setLoading(true)
     return signInWithPopup(auth, GithubProvider)
   }
-  // get current user
-
+  
+  // get current user update
+  updateProfile(auth.currentUser, {
+    displayName: "Jane Q. User", photoURL: "https://example.com/jane-q-user/profile.jpg"
+}).then(() => {
+    // Profile updated!
+    // ...
+}).catch((error) => {
+    console.log(error)
+});
 
 //--------
   useEffect(() => {
