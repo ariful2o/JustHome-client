@@ -19,6 +19,7 @@ import PrivateRoute from './PrivateRoute/PrivateRoute';
 import NewsDetails from './components/NewsDetails';
 import Scholarships from './pages/Scholarships';
 import Profile from './pages/Profile';
+import UpdateProfile from './pages/UpdateProfile';
 
 const router = createBrowserRouter([
   {
@@ -67,7 +68,11 @@ const router = createBrowserRouter([
       },
       {
         path: '/profile',
-        element: <Profile />,
+        element:<PrivateRoute> <Profile /></PrivateRoute>,
+      },
+      {
+        path: '/updateprofile',
+        element: <PrivateRoute><UpdateProfile/></PrivateRoute>,
       }
     ]
   },

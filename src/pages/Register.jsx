@@ -54,7 +54,7 @@ export default function Register() {
         setCheckboox('')
 
         registerUser(email, password)
-            .then(result => {
+            .then(() => {
                 // const usr = result.user
                 e.target.reset()
                 navigate('/')
@@ -73,7 +73,7 @@ export default function Register() {
             // Profile updated!
             console.log('Profile updated!')
             // ...
-          }).catch((error) => {
+          }).catch(() => {
             // An error occurred
             // ...
           });

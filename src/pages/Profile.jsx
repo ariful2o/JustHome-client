@@ -2,6 +2,7 @@
 import auth from "../firebase/firebase.init";
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../authProvider/AuthProvider";
+import { Link } from "react-router-dom";
 
 
 export default function Profile() {
@@ -43,7 +44,9 @@ export default function Profile() {
                 <p>Email : {email}</p>
                 <p>Email Verified : {emailVerified}</p>
                 <div className="card-actions">
-                    <button className="btn btn-outline btn-primary">Update Profile</button>
+                    <Link to='/updateprofile'>
+                        <button className="btn btn-outline btn-primary">Update Profile</button>
+                    </Link>
                 </div>
             </div>
         </div>
