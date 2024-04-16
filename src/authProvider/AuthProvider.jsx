@@ -1,8 +1,7 @@
-import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth"
-import { createContext, useEffect, useState } from "react"
-import auth from "../firebase/firebase.init"
-import { PropTypes } from "prop-types"
-import { updateProfile } from "firebase/auth";
+import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import { PropTypes } from "prop-types";
+import { createContext, useEffect, useState } from "react";
+import auth from "../firebase/firebase.init";
 
 export const AuthContext = createContext(null)
 export default function AuthProvider({ children }) {

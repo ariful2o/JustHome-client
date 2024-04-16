@@ -1,12 +1,12 @@
 import Banner from "../components/Banner";
 import BannerImg from "../components/BannerImg";
 import HelpCard from "../components/HelpCard";
-import Slider from "../components/Slider";
+import SwiperSlider from "../components/SwiperSlider";
 
 export default function Home() {
   return (
     <div>
-      <Slider />
+      <SwiperSlider/>
       <Banner />
       <HelpCard />
       <BannerImg/>

@@ -9,6 +9,7 @@ export default function Profile() {
     const [url, setUrl] = useState(null)
     const [email, setEmail] = useState(null)
     const [name, setName] = useState(null)
+    const [emailVerified, setEmailVerified] = useState(null)
 
     useEffect(() => {
         const userr = auth.currentUser;
@@ -17,7 +18,7 @@ export default function Profile() {
                 setUrl(profile.photoURL)
                 setEmail(profile.email)
                 setName(profile.displayName)
-
+                setEmailVerified(user.emailVerified);
 
             });
         }
@@ -29,13 +30,23 @@ export default function Profile() {
 
 
     return (
-        <>
-
-            <img className="rounded-full w-80 h-80 mx-auto" src={url} alt="image description" />
-
-                <h2 className="text-2xl text-center">{name}</h2>
-                <p className="text-center">{email}</p>
-            </>
-            )
+        <div className="card w-96 mx-auto bg-base-100 shadow-xl my-20">
+            <figure className="px-10 pt-10">
+                <div className="avatar">
+                    <div className="w-24 my-8 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                        <img src={url} />
+                    </div>
+                </div>
+            </figure>
+            <div className="card-body items-center text-center">
+                <h2 className="card-title">Name : {name}</h2>
+                <p>Email : {email}</p>
+                <p>Email Verified : {emailVerified}</p>
+                <div className="card-actions">
+                    <button className="btn btn-outline btn-primary">Update Profile</button>
+                </div>
+            </div>
+        </div>
+    )
 }
 
