@@ -6,7 +6,7 @@ export default function NewsCard({ item }) {
 
     return (
     <div className='my-10 shadow-xl'>
-        <img className="w-full p-1 rounded-xl lg:p-10" src={blog_image} alt="" />
+        <img className="w-full p-1 rounded-xl lg:p-10 animate__animated animate__zoomIn" src={blog_image} alt="" />
         <div className="flex flex-col lg:flex-row gap-1 lg:gap-8 p-4">
             <h3 className="p-4"><span className="font-bold text-3xl">02</span><br /> JUN</h3>
             <div className="divider  lg:divider-horizontal"></div>

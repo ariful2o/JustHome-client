@@ -3,7 +3,7 @@
 export default function HelpCard() {
     return (
         <div className="bg-[#43CEC9] text-center" >
-            <h1 className="text-6xl font-bold text-white pt-32 mb-10 font-vibes">HOW WE HELP</h1>
+            <h1 className="text-6xl font-bold text-white pt-32 mb-10 font-vibes animate__backInDown animate__animated">HOW WE HELP</h1>
             <h4 className="text-4xl text-[#162C5A] font-semibold mb-32 max-w-xl mx-auto font-sotify italic">We work individually with each family to
                 understand their specific needs</h4>
 

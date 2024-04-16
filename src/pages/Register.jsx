@@ -2,20 +2,22 @@ import { useContext, useEffect, useState } from "react";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../authProvider/AuthProvider";
-import { updateProfile } from "firebase/auth";
+import { sendEmailVerification, updateProfile } from "firebase/auth";
 import auth from "../firebase/firebase.init";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 export default function Register() {
-    const {user}=useContext(AuthContext)
+    const { user } = useContext(AuthContext)
     const { registerUser } = useContext(AuthContext)
     const [errorpassword, setErrorPassword] = useState(null)
     const [checkbox, setCheckboox] = useState(null)
     const [weekPassword, setWeekPassword] = useState(null)
     const [showPassword, setShowPassword] = useState(true)
     const navigate = useNavigate()
-    const [name,setName]=useState(null)
-    const [photoURL,setPhotoURL]=useState(null)
+    const [name, setName] = useState(null)
+    const [photoURL, setPhotoURL] = useState(null)
 
     const handleShowPassWord = () => {
         setShowPassword(!showPassword)
@@ -59,31 +61,35 @@ export default function Register() {
                 e.target.reset()
                 navigate('/')
                 //update data
+                sendEmailVerification(auth.currentUser)
+                    .then(() => {
+                        toast('Email verification sent!')
+                        // ...
+                    });
 
-                
             })
             .catch((err) => console.log(err))
     }
 
-    useEffect(()=>{
-     
+    useEffect(() => {
+
         updateProfile(auth.currentUser, {
             displayName: name, photoURL: photoURL,
-          }).then(() => {
+        }).then(() => {
             // Profile updated!
             console.log('Profile updated!')
             // ...
-          }).catch(() => {
+        }).catch(() => {
             // An error occurred
             // ...
-          });
-    },[user])
+        });
+    }, [user])
 
 
     //password type chenk strong
     const strongPasswordck = (event) => {
         const password = event.target.value
-        let regex =/^(?=.*[A-Z])(?=.*\d)(?=.*[^\w\s]).+$/;
+        let regex = /^(?=.*[A-Z])(?=.*\d)(?=.*[^\w\s]).+$/;
 
         if (!regex.test(password)) {
             setWeekPassword(`You Password so week`)
@@ -96,59 +102,60 @@ export default function Register() {
 
 
     return (
-            <div className="max-h-svh  ">
-                <div className="card shrink-0 w-full max-w-2xl shadow-2xl bg-base-100   top-20 left-1/4">
-                    <h1 className="text-center text-5xl font-bold pt-8">Register your account</h1>
+        <div className="max-h-svh  ">
+            <ToastContainer />
+            <div className="card shrink-0 w-full max-w-2xl shadow-2xl bg-base-100   top-20 left-1/4">
+                <h1 className="text-center text-5xl font-bold pt-8">Register your account</h1>
 
-                    <form className="card-body" onSubmit={handleRegister}>
-                        <div className="form-control">
-                            <label className="label">
-                                <span className="label-text">Name</span>
-                            </label>
-                            <input name="name" type="text" placeholder="Name" className="input input-bordered" required />
-                            <label className="label">
-                                <span className="label-text">Photo URL</span>
-                            </label>
-                            <input name="photo" type="file" placeholder="Photo URL" className="input-bordered  file-input file-input-ghost w-full" />
-                            <label className="label">
-                                <span className="label-text">Email</span>
-                            </label>
-                            <input name="email" type="email" placeholder="email" className="input input-bordered" required />
-                        </div>
-                        <div className="form-control relative">
-                            <label className="label">
-                                <span className="label-text">{weekPassword ? <small className="text-red-500 italic">{weekPassword}</small> : 'Password'}</span>
-                            </label>
-                            {
+                <form className="card-body" onSubmit={handleRegister}>
+                    <div className="form-control">
+                        <label className="label">
+                            <span className="label-text">Name</span>
+                        </label>
+                        <input name="name" type="text" placeholder="Name" className="input input-bordered" required />
+                        <label className="label">
+                            <span className="label-text">Photo URL</span>
+                        </label>
+                        <input name="photo" type="file" placeholder="Photo URL" className="input-bordered  file-input file-input-ghost w-full" />
+                        <label className="label">
+                            <span className="label-text">Email</span>
+                        </label>
+                        <input name="email" type="email" placeholder="email" className="input input-bordered" required />
+                    </div>
+                    <div className="form-control relative">
+                        <label className="label">
+                            <span className="label-text">{weekPassword ? <small className="text-red-500 italic">{weekPassword}</small> : 'Password'}</span>
+                        </label>
+                        {
 
+                        }
+                        <input onChange={strongPasswordck} name="password" type={!showPassword ? "text" : "password"} placeholder="password" className="input input-bordered" required />
+                        <div className="absolute right-2 top-1/4">
+                            {showPassword ? <span onClick={handleShowPassWord}><FaRegEye /></span> : <span onClick={handleShowPassWord}><FaRegEyeSlash /></span>
                             }
-                            <input onChange={strongPasswordck} name="password" type={!showPassword ? "text" : "password"} placeholder="password" className="input input-bordered" required />
-                            <div className="absolute right-2 top-1/4">
-                                {showPassword ? <span onClick={handleShowPassWord}><FaRegEye /></span> : <span onClick={handleShowPassWord}><FaRegEyeSlash /></span>
-                                }
-                            </div>
-                            <label className="label relative">
-                                <span className="label-text">{errorpassword ? <small className="text-red-500 italic">{errorpassword}</small> : 'Confirm Password'}</span>
-                            </label>
-
-                            <input name="confirmpassword" type={!showPassword ? "text" : "password"} placeholder="Confirm password" className="input input-bordered relative" required />
-
-                            <div className="flex gap-4 mt-3 items-center">
-                                <input name="checked" type="checkbox" className="checkbox checkbox-success" />
-                                <a className="label-text hover:underline">Accept Term & Conditions</a>
-                                {
-                                    checkbox && <small className="text-red-500 italic">{checkbox}</small>
-                                }
-                            </div>
-
                         </div>
-                        <div className="form-control mt-6">
-                            <button className="text-gray-900 bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Register</button>
+                        <label className="label relative">
+                            <span className="label-text">{errorpassword ? <small className="text-red-500 italic">{errorpassword}</small> : 'Confirm Password'}</span>
+                        </label>
+
+                        <input name="confirmpassword" type={!showPassword ? "text" : "password"} placeholder="Confirm password" className="input input-bordered relative" required />
+
+                        <div className="flex gap-4 mt-3 items-center">
+                            <input name="checked" type="checkbox" className="checkbox checkbox-success" />
+                            <a className="label-text hover:underline">Accept Term & Conditions</a>
+                            {
+                                checkbox && <small className="text-red-500 italic">{checkbox}</small>
+                            }
                         </div>
-                        <p className="text-center py-4">Already Have An Account ?<Link to="/login" className="text-[#F75B5F] font-bold"> Login</Link></p>
-                    </form>
-                </div>
+
+                    </div>
+                    <div className="form-control mt-6">
+                        <button className="text-gray-900 bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Register</button>
+                    </div>
+                    <p className="text-center py-4">Already Have An Account ?<Link to="/login" className="text-[#F75B5F] font-bold"> Login</Link></p>
+                </form>
             </div>
+        </div>
     )
 }
 
