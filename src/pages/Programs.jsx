@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import ComminBanner from "../components/ComminBanner";
 import { NavLink, useLoaderData } from 'react-router-dom'
 import './Programs.css'
+import { Helmet } from "react-helmet-async";
 
 
 export default function Programs() {
@@ -39,6 +40,9 @@ export default function Programs() {
   </>
   return (
     <div>
+      <Helmet>
+        <title>Light School House | Programs</title>
+      </Helmet>
       <ComminBanner location={'Programs'}></ComminBanner>
       <h2 className="text-5xl text-[#43CEC6] text-center font-black my-10 font-sotify animate__rotateIn animate__animated ">OUR PROGRAMS</h2>
       <p className="text-3xl italic mb-10 font-sotify text-[#162C5A] text-center animate__animated animate__backInLeft animate__faster">Make a difference life of a <br />child with special needs</p>

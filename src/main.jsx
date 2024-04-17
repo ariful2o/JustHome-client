@@ -20,6 +20,7 @@ import NewsDetails from './components/NewsDetails';
 import Scholarships from './pages/Scholarships';
 import Profile from './pages/Profile';
 import UpdateProfile from './pages/UpdateProfile';
+import { HelmetProvider } from 'react-helmet-async';
 
 const router = createBrowserRouter([
   {
@@ -42,7 +43,7 @@ const router = createBrowserRouter([
       {
         path: '/programs',
         element: <Programs />,
-        loader:()=>fetch('./programs.json')
+        loader: () => fetch('./programs.json')
       },
       {
         path: '/newsEvents',
@@ -63,16 +64,16 @@ const router = createBrowserRouter([
         loader: () => fetch('../news.json'),
       },
       {
-        path:'/scholarships',
-        element:<Scholarships/>
+        path: '/scholarships',
+        element: <Scholarships />
       },
       {
         path: '/profile',
-        element:<PrivateRoute> <Profile /></PrivateRoute>,
+        element: <PrivateRoute> <Profile /></PrivateRoute>,
       },
       {
         path: '/updateprofile',
-        element: <PrivateRoute><UpdateProfile/></PrivateRoute>,
+        element: <PrivateRoute><UpdateProfile /></PrivateRoute>,
       }
     ]
   },
@@ -81,7 +82,9 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <AuthProvider>
-      <RouterProvider router={router} />
+      <HelmetProvider>
+        <RouterProvider router={router} />
+      </HelmetProvider>
     </AuthProvider>
   </React.StrictMode>,
 )

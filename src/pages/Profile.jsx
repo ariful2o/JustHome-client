@@ -3,6 +3,7 @@ import auth from "../firebase/firebase.init";
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../authProvider/AuthProvider";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 
 export default function Profile() {
@@ -32,6 +33,9 @@ export default function Profile() {
 
     return (
         <div className="card w-96 mx-auto bg-base-100 shadow-xl my-20">
+            <Helmet>
+                <title>Profile</title>
+            </Helmet>
             <figure className="px-10 pt-10">
                 <div className="avatar">
                     <div className="w-24 my-8 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">

@@ -2,6 +2,7 @@ import { updateProfile } from 'firebase/auth';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import auth from '../firebase/firebase.init';
+import { Helmet } from 'react-helmet-async';
 
 export default function UpdateProfile() {
 
@@ -21,6 +22,9 @@ export default function UpdateProfile() {
     }
     return (
         <div className="max-h-svh  ">
+            <Helmet>
+                <title>Profile | Update Profile</title>
+            </Helmet>
             <ToastContainer />
             <div className="card shrink-0 w-full max-w-2xl shadow-2xl bg-base-100   top-20 left-1/4">
                 <h1 className="text-center text-5xl font-bold pt-8">Update your account</h1>

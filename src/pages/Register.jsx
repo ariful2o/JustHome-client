@@ -6,6 +6,7 @@ import { sendEmailVerification, updateProfile } from "firebase/auth";
 import auth from "../firebase/firebase.init";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Helmet } from "react-helmet-async";
 
 
 export default function Register() {
@@ -103,9 +104,12 @@ export default function Register() {
 
     return (
         <div className="max-h-svh  ">
+            <Helmet>
+                <title>Light School House | Register</title>
+            </Helmet>
             <ToastContainer />
             <div className="card shrink-0 w-full max-w-2xl shadow-2xl bg-base-100   top-20 left-1/4">
-                <h1 className="text-center text-5xl font-bold pt-8">Register your account</h1>
+                <h1 className="text-center text-5xl font-bold pt-8 font-sotify">Register your account</h1>
 
                 <form className="card-body" onSubmit={handleRegister}>
                     <div className="form-control">
@@ -116,7 +120,7 @@ export default function Register() {
                         <label className="label">
                             <span className="label-text">Photo URL</span>
                         </label>
-                        <input name="photo" type="file" placeholder="Photo URL" className="input-bordered  file-input file-input-ghost w-full" />
+                        <input name="photo" type="text" placeholder="Photo URL" className="input-bordered  file-input file-input-ghost w-full" />
                         <label className="label">
                             <span className="label-text">Email</span>
                         </label>

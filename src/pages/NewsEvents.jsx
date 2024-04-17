@@ -3,6 +3,7 @@ import NewsCard from '../components/NewsCard'
 import DeparmentContack from '../components/DeparmentContack'
 import { useEffect, useState } from 'react'
 import ComminBanner from '../components/ComminBanner'
+import { Helmet } from 'react-helmet-async'
 
 export default function NewsEvents() {
   const [news, setNews] = useState([])
@@ -15,6 +16,9 @@ export default function NewsEvents() {
   // const news=useLoaderData()
   return (
     <>
+    <Helmet>
+        <title>Light School House | News & Events</title>
+      </Helmet>
       <ComminBanner location={'News & Events'}></ComminBanner>
       <div className='grid grid-cols-1 lg:grid-cols-4'>
         <div className="col-span-3 ">

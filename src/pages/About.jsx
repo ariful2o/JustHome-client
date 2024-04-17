@@ -4,6 +4,7 @@ import { MapContainer, TileLayer } from 'leaflet';
 import BannerImg from "../components/BannerImg";
 import ComminBanner from "../components/ComminBanner";
 import Map from "../components/Map";
+import { Helmet } from "react-helmet-async";
 
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
@@ -15,6 +16,9 @@ export default function About() {
   return (
     <>
       <ComminBanner location={'About'}></ComminBanner>
+      <Helmet>
+        <title>Light School House | About</title>
+      </Helmet>
 
       <div className="flex flex-col lg:flex-row lg:p-10 mx-auto">
         <div className="max-w-2xl lg:p-20">

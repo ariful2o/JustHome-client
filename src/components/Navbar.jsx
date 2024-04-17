@@ -69,9 +69,9 @@ export default function Navbar() {
                 <div className="relative hidden lg:flex">
                     <div className="flex flex-row">
                         <img className="w-14 lg:w-20" src="https://lighthouse.ancorathemes.com/wp-content/uploads/2017/06/lighthouse.png" alt="" />
-                        <a className="btn btn-ghost text-xl">Light House</a>
+                        <a className="btn btn-ghost text-xl font-sotify">Light House</a>
                     </div>
-                    <span className="absolute italic bottom-1 left-20 text-[#ddbc3ace] btn btn-ghost text-xl">SCHOOL</span>
+                    <span className="absolute italic bottom-1 left-20 text-[#ddbc3ace] btn btn-ghost text-xl font-sotify">SCHOOL</span>
                 </div>
             </div>
             <div className="navbar-center hidden lg:flex">

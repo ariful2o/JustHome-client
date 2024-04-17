@@ -5,6 +5,7 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { AuthContext } from "../authProvider/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 
 export default function Login() {
@@ -58,6 +59,9 @@ export default function Login() {
 
     return (
         <>
+        <Helmet>
+            <title>Light School House | Login</title>
+        </Helmet>
             <ToastContainer />
             <dialog id="my_modal_3" className="modal">
                 <div className="modal-box">
@@ -75,7 +79,7 @@ export default function Login() {
             </dialog>
             <div className="max-h-svh  relative">
                 <div className="card shrink-0 w-full max-w-2xl shadow-2xl bg-base-100   top-32 left-1/4 py-10">
-                    <h1 className="text-center text-5xl font-bold">Login your account</h1>
+                    <h1 className="text-center text-5xl font-bold font-sotify">Login your account</h1>
                     <form className="card-body" onSubmit={handleLogIn}>
                         <div className="form-control">
                             <label className="label">

@@ -11,7 +11,7 @@ export default function NewsCard({ item }) {
             <h3 className="p-4"><span className="font-bold text-3xl">02</span><br /> JUN</h3>
             <div className="divider  lg:divider-horizontal"></div>
             <div className="">
-                <h1 className="text-[#353372] text-xl lg:text-4xl font-bold font-serif">{estate_title}</h1>
+                <h1 className="text-[#353372] text-xl lg:text-4xl font-bold font-sotify">{estate_title}</h1>
                 <p className="text-[#959595] text-xl font-serif italic my-5">{date} / By {author_name} / {segment_name}</p>
             </div>
         </div>
