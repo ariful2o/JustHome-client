@@ -10,14 +10,14 @@ export default function Error404() {
       <Helmet>
         <title>Error Page</title>
       </Helmet>
-      <h1>Oops!</h1>
-      <p>Sorry, an unexpected error has occurred.</p>
-      <p>
+      <h1 className="text-4xl font-sotify my-6">Oops!</h1>
+      <p className="italic text-xl my-4">Sorry, an unexpected error has occurred.</p>
+      <p className="text-6xl text-red-500">
         <i>{error.statusText || error.message}</i>
       </p>
-      <p>
+      <p className="mt-10">
         <Link to="/">
-          <button className="btn btn-primary">Go Home</button>
+          <button className="btn btn-primary rounded-3xl">Go Home</button>
         </Link>
       </p>
     </div>
