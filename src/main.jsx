@@ -36,8 +36,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/apartments/:id',
-        // element: <PrivateRoute><Apartment /></PrivateRoute>,
-        element: <Apartment />,
+        element: <PrivateRoute><Apartment /></PrivateRoute>,
         loader:()=>fetch('./booking.json'),
       },
       
@@ -69,8 +68,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/newsEvents/:id',
-        // element: <PrivateRoute><NewsDetails /></PrivateRoute>,
-        element: <NewsDetails />,
+        element: <PrivateRoute><NewsDetails /></PrivateRoute>,
         loader: () => fetch('./booking.json'),
       },
       {

@@ -1,12 +1,12 @@
-    light-house-school
+    House Rent
 
     Description
 
-Light House School is a private project (hence the private status) designed for educational purposes. It utilizes modern web technologies and frameworks to create an interactive and dynamic learning environment.
+House Rent is a private project (hence the private status) designed for educational purposes. It utilizes modern web technologies and frameworks to create an interactive and dynamic learning environment.
 
     Installation
 
-To get started with Light House School, follow these steps:
+To get started with House Rent, follow these steps:
 
 Clone the repository to your local machine.
 Navigate to the project directory.
@@ -23,20 +23,20 @@ npm run preview: Preview the built project locally.
 
     Technologies Used
 
-React: A JavaScript library for building user interfaces.
-Firebase: A platform for building web and mobile applications.
-Leaflet: An open-source JavaScript library for interactive maps.
-Google Map React: A library for integrating Google Maps into React applications.
-React Router Dom: Declarative routing for React applications.
-React Toastify: React notifications made easy.
-Swiper: A modern touch slider.
-Animate.css: A library of ready-to-use, cross-browser animations.
-Localforage: A fast and simple storage library for JavaScript.
-React Helmet Async: A document head manager for React.
-React Icons: A library of popular icons for React.
-Prop Types: Runtime type checking for React props.
-Match Sorter: Simple, expected, and deterministic best-match sorting of an array in JavaScript.
-Sort By: Sorting an array of objects by one or more properties.
+* React: A JavaScript library for building user interfaces.
+* Firebase: A platform for building web and mobile applications.
+* Leaflet: An open-source JavaScript library for interactive maps.
+* Google Map React: A library for integrating Google Maps into React applications.
+* React Router Dom: Declarative routing for React applications.
+* React Toastify: React notifications made easy.
+* Swiper: A modern touch slider.
+* Animate.css: A library of ready-to-use, cross-browser animations.
+* Localforage: A fast and simple storage library for JavaScript.
+* React Helmet Async: A document head manager for React.
+* React Icons: A library of popular icons for React.
+* Prop Types: Runtime type checking for React props.
+* Match Sorter: Simple, expected, and deterministic best-match sorting of an array in JavaScript.
+* Sort By: Sorting an array of objects by one or more properties.
 
     Contributing
 
