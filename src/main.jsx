@@ -1,26 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { HelmetProvider } from 'react-helmet-async';
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import AuthProvider from './authProvider/AuthProvider';
+import NewsDetails from './components/NewsDetails';
 import './index.css';
-import Root from './Root';
+import About from './pages/About';
+import Apartment from './pages/Apartment';
 import Error404 from './pages/Error404';
 import Home from './pages/Home';
-import AuthProvider from './authProvider/AuthProvider';
-import Features from './pages/Features';
-import About from './pages/About';
-import Programs from './pages/Programs';
-import NewsEvents from './pages/NewsEvents';
-import Register from './pages/Register';
 import Login from './pages/Login';
-import PrivateRoute from './PrivateRoute/PrivateRoute';
-import NewsDetails from './components/NewsDetails';
-import Scholarships from './pages/Scholarships';
+import NewsEvents from './pages/NewsEvents';
 import Profile from './pages/Profile';
+import Programs from './pages/Programs';
+import Register from './pages/Register';
+import RentalDetails from './pages/RentalDetails';
+import Scholarships from './pages/Scholarships';
 import UpdateProfile from './pages/UpdateProfile';
-import { HelmetProvider } from 'react-helmet-async';
+import PrivateRoute from './PrivateRoute/PrivateRoute';
+import Root from './Root';
 
 const router = createBrowserRouter([
   {
@@ -31,11 +32,15 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home />,
+        loader:()=>fetch('./booking.json'),
       },
       {
-        path: '/features',
-        element: <Features />,
+        path: '/apartments/:id',
+        // element: <PrivateRoute><Apartment /></PrivateRoute>,
+        element: <Apartment />,
+        loader:()=>fetch('./booking.json'),
       },
+      
       {
         path: '/about',
         element: <About />,
@@ -43,12 +48,16 @@ const router = createBrowserRouter([
       {
         path: '/programs',
         element: <Programs />,
-        loader: () => fetch('./programs.json')
+        loader: () => fetch('./news.json')
+      },
+      {
+        path: '/programs/:id',
+        element: <RentalDetails />,
+        loader: () => fetch('./news.json')
       },
       {
         path: '/newsEvents',
         element: <NewsEvents />,
-        loader: () => fetch('./news.json'),
       },
       {
         path: '/register',
@@ -60,8 +69,9 @@ const router = createBrowserRouter([
       },
       {
         path: '/newsEvents/:id',
-        element: <PrivateRoute><NewsDetails /></PrivateRoute>,
-        loader: () => fetch('../news.json'),
+        // element: <PrivateRoute><NewsDetails /></PrivateRoute>,
+        element: <NewsDetails />,
+        loader: () => fetch('./booking.json'),
       },
       {
         path: '/scholarships',
@@ -74,7 +84,8 @@ const router = createBrowserRouter([
       {
         path: '/updateprofile',
         element: <PrivateRoute><UpdateProfile /></PrivateRoute>,
-      }
+      },
+   
     ]
   },
 ]);

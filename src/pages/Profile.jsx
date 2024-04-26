@@ -11,7 +11,6 @@ export default function Profile() {
     const [url, setUrl] = useState(null)
     const [email, setEmail] = useState(null)
     const [name, setName] = useState(null)
-    const [emailVerified, setEmailVerified] = useState(null)
 
     useEffect(() => {
         const userr = auth.currentUser;
@@ -20,7 +19,6 @@ export default function Profile() {
                 setUrl(profile.photoURL)
                 setEmail(profile.email)
                 setName(profile.displayName)
-                setEmailVerified(user.emailVerified);
 
             });
         }
@@ -45,8 +43,7 @@ export default function Profile() {
             </figure>
             <div className="card-body items-center text-center">
                 <h2 className="card-title">Name : {name}</h2>
-                <p>Email : {email}</p>
-                <p>Email Verified : {emailVerified}</p>
+                <p>Email : {email ? email :"Not Found"}</p>
                 <div className="card-actions">
                     <Link to='/updateprofile'>
                         <button className="btn btn-outline btn-primary">Update Profile</button>

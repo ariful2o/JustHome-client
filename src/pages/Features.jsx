@@ -3,12 +3,14 @@ import ComminBanner from "../components/ComminBanner";
 
 
 export default function Features() {
+ 
   return (
     <div>
-      <ComminBanner location={'Features'}></ComminBanner>
+      <ComminBanner location={'Booking'}></ComminBanner>
       <Helmet>
-        <title>Light School House | Features</title>
+        <title>House Rent| Booking</title>
       </Helmet>
+
     </div>
   )
 }

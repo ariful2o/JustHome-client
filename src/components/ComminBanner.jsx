@@ -3,7 +3,7 @@ import { PropTypes } from "prop-types"
 
 export default function ComminBanner({ location }) {
   return (
-    <div className="hero max-h-60" style={{ backgroundImage: 'url(https://lighthouse.ancorathemes.com/wp-content/uploads/2017/06/how1-370x233.jpg)' }}>
+    <div className="hero max-h-60" style={{ backgroundImage: 'url(https://elementor.emjecreative.com/architecto/wp-content/uploads/sites/5/2023/08/diverse-team-of-specialists-with-computer-on-const-TXZ479D.jpg)' }}>
       <div className="hero-overlay bg-opacity-60"></div>
       <div className="hero-content text-center text-neutral-content">
         <div className="max-w-md my-16">

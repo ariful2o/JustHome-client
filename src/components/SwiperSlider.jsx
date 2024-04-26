@@ -11,15 +11,7 @@ import '../components/SwiperSlider.css';
 // import required modules
 import { Autoplay, EffectCoverflow, Pagination } from 'swiper/modules';
 
-import img4 from '../assets/homepage-slide-1.jpg';
-import img5 from '../assets/how1-370x233.jpg';
-import img6 from '../assets/how3-370x233.jpg';
-import img2 from '../assets/istockphoto-1297055506-612x612.jpg';
-import img1 from '../assets/istockphoto-1338737831-612x612.jpg';
-import img3 from '../assets/lk-home-union-life-protect1600x490.jpg';
-import img7 from '../assets/post-15-370x370.jpg';
-import img8 from '../assets/post-4-370x370.jpg';
-import img9 from '../assets/program1-1170x658.jpg';
+
 export default function SwiperSlider() {
   return (
     <Swiper
@@ -43,32 +35,30 @@ export default function SwiperSlider() {
         className="mySwiper"
       >
          <SwiperSlide>
-        <img className='h-full' src={img6} />
+        <img className='h-full' src={'https://demo.softhopper.studio/house-rent/wp-content/uploads/sites/7/2017/04/blog-single-360x232.jpg'} />
         </SwiperSlide>
         <SwiperSlide>
-        <img className='h-full' src={img7} />
+        <img className='h-full' src={'https://demo.softhopper.studio/house-rent/wp-content/uploads/sites/7/2017/04/demo-image-rental-21-360x270.jpg'} />
         </SwiperSlide>
         <SwiperSlide>
-        <img className='h-full' src={img8} />
+        <img className='h-full' src={'https://demo.softhopper.studio/house-rent/wp-content/uploads/sites/7/2017/04/demo-image-rental-36-360x270.jpg'} />
         </SwiperSlide>
         <SwiperSlide>
-        <img className='h-full' src={img9} />
+        <img className='h-full' src={'https://demo.softhopper.studio/house-rent/wp-content/uploads/sites/7/2017/04/gallery-9-150x150.jpg'} />
         </SwiperSlide>
         <SwiperSlide>
-          <img className='h-full' src={img1} />
+          <img className='h-full' src={'https://demo.softhopper.studio/house-rent/wp-content/uploads/sites/7/2017/04/gallery-8-150x150.jpg'} />
         </SwiperSlide>
         <SwiperSlide>
-        <img className='h-full' src={img2} />
+        <img className='h-full' src={'https://demo.softhopper.studio/house-rent/wp-content/uploads/sites/7/2017/04/gallery-11-150x150.jpg'} />
         </SwiperSlide>
         <SwiperSlide>
-        <img className='h-full' src={img5} />
+        <img className='h-full' src={'https://demo.softhopper.studio/house-rent/wp-content/uploads/sites/7/2017/04/demo-image-rental-37-360x270.jpg'} />
         </SwiperSlide>
         <SwiperSlide>
-        <img className='h-full' src={img3} />
+        <img className='h-full' src={'https://demo.softhopper.studio/house-rent/wp-content/uploads/sites/7/2017/04/gallery-five-266x300-1.png'} />
         </SwiperSlide>
-        <SwiperSlide>
-        <img className='h-full' src={img4} />
-        </SwiperSlide>
+        
        
       </Swiper>
   )

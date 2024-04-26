@@ -1,11 +1,11 @@
 import { useContext, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { FaGithub, FaGoogle } from "react-icons/fa";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { AuthContext } from "../authProvider/AuthProvider";
-import { Helmet } from "react-helmet-async";
 
 
 export default function Login() {
@@ -59,9 +59,9 @@ export default function Login() {
 
     return (
         <>
-        <Helmet>
-            <title>Light School House | Login</title>
-        </Helmet>
+            <Helmet>
+                <title>House Rent| Login</title>
+            </Helmet>
             <ToastContainer />
             <dialog id="my_modal_3" className="modal">
                 <div className="modal-box">

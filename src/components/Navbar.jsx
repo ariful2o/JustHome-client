@@ -20,13 +20,15 @@ export default function Navbar() {
 
     //navlinks
     const navlinks = <>
-        <NavLink exact to='/' activeClassName="active" >Home</NavLink>
-        <NavLink to='/features' activeClassName="active" >Features</NavLink>
-        <NavLink to='/about' activeClassName="active" >About</NavLink>
-        <NavLink to='/programs' activeClassName="active" >Programs</NavLink>
-        <NavLink to='/newsEvents' activeClassName="active" >News & Events</NavLink>
+        <NavLink to='/' activeClassName="active" >Home</NavLink>
+        <NavLink to='/about' activeClassName="active" >About Us</NavLink>
+        <NavLink to='/programs' activeClassName="active" >Rental</NavLink>
+        <NavLink to='/newsEvents' activeClassName="active" >Residential</NavLink>
         {user &&
-            <NavLink to='/scholarships' activeClassName="active" className="nav-link">Scholarships</NavLink>
+            <><NavLink to='/scholarships' activeClassName="active" className="nav-link">Services</NavLink>
+            <NavLink to='/profile' activeClassName="active">Profile</NavLink>
+            <NavLink to='/updateprofile' activeClassName="active">Update Profile</NavLink></>
+          
         }
     </>
 
@@ -68,10 +70,10 @@ export default function Navbar() {
                 </div>
                 <div className="relative hidden lg:flex">
                     <div className="flex flex-row">
-                        <img className="w-14 lg:w-20" src="https://lighthouse.ancorathemes.com/wp-content/uploads/2017/06/lighthouse.png" alt="" />
-                        <a className="btn btn-ghost text-xl font-sotify">Light House</a>
+                        <img className="w-10 h-10" src="https://lighthouse.ancorathemes.com/wp-content/uploads/2017/06/lighthouse.png" alt="" />
+                        <a className="btn btn-ghost text-xl font-sotify">House Rent</a>
                     </div>
-                    <span className="absolute italic bottom-1 left-20 text-[#ddbc3ace] btn btn-ghost text-xl font-sotify">SCHOOL</span>
+                   
                 </div>
             </div>
             <div className="navbar-center hidden lg:flex">
@@ -98,7 +100,6 @@ export default function Navbar() {
                         </span>
                     </NavLink>
                 }
-                <a className="btn mx-4 bg-[#FFD122] hidden lg:flex">DONATE</a>
                 {user ? <a onClick={signout} className="btn mx-4 bg-neutral-content opacity-90">LOGOUT</a> : <Link to='/login' className="btn">LOGIN</Link>}
             </div>
         </div>

@@ -1,7 +1,7 @@
-import img8 from '../assets/post-4-370x370.jpg'
+
 export default function BannerImg() {
     return (
-        <div className="hero min-h-screen" style={{ backgroundImage: `url(${img8})` }}>
+        <div className="hero min-h-screen" style={{ backgroundImage: `url('https://kitss.themescamp.com/archo/wp-content/uploads/sites/2/2020/06/S7-3.jpg')` }}>
             <div className="hero-overlay bg-opacity-60"></div>
             <div className="hero-content text-center text-neutral-content">
                 <div className="max-w-md">

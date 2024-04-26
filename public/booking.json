@@ -1,0 +1,194 @@
+[
+  {
+    "id":1,
+    "image": "https://demo.softhopper.studio/house-rent/wp-content/uploads/sites/7/2017/04/demo-image-rental-23.jpg",
+    "title": "Family Apartment Seven",
+    "details":"3000 sq-ft., 3 Bedroom, Semi-furnished, Luxurious, South facing Apartment for Rent in Rangs Malancha, Melbourne.",
+    "location": "Sewden",
+    "bathrooms": 2,
+    "bedrooms": 3,
+    "price": 8000,
+    "priceDetails": {
+      "Month": "$550",
+      "serviceCharge": 8000,
+      "securityDeposit": "3 month’s rent",
+      "flatReleasePolicy": "60 days notice"
+    },
+    "propertyDetails": {
+      "addressArea": "Rangs Malancha, House-68, Road-6A (Dead End Road), Dhanmondi Residential Area.",
+      "flatSize": "1500 sq ft",
+      "Floor": " A5 (5th Floor) (6 storied Building ) (South Facing Unit)",
+      "roomCategory": " 3 Large Bed Rooms with 3 Verandas, Spacious Drawing, Dining & Family Living Room, Highly Decorated Kitchen with Store Room and Servant room with attached Toilet.",
+      "Facilities": ["Swimming Pool", "Gym", "Parking"],
+      "additionalFacilities": " a. Electricity with full generator load, b. Central Gas Geyser, c. 2 Car Parking with 1 Driver’s Accommodation, d. Community Conference Hall, e. Roof Top Beautified Garden and Grassy Ground, f. Cloth Hanging facility with CC camera"
+    }
+  }, 
+  {
+    "id":2,
+    "image": "https://demo.softhopper.studio/house-rent/wp-content/uploads/sites/7/2017/04/demo-image-rental-34.jpg",
+    "title": "Family Apartment Eight",
+    "details":"3000 sq-ft., 3 Bedroom, Semi-furnished, Luxurious, South facing Apartment for Rent in Rangs Malancha, Melbourne.",
+    "location": "Sewden",
+    "bathrooms": 2,
+    "bedrooms": 3,
+    "price": 8000,
+    "priceDetails": {
+      "Month": "$550",
+      "serviceCharge": 8000,
+      "securityDeposit": "3 month’s rent",
+      "flatReleasePolicy": "60 days notice"
+    },
+    "propertyDetails": {
+      "addressArea": "Rangs Malancha, House-68, Road-6A (Dead End Road), Dhanmondi Residential Area.",
+      "flatSize": "3000 sq ft",
+      "Floor": " A5 (5th Floor) (6 storied Building ) (South Facing Unit)",
+      "roomCategory": " 3 Large Bed Rooms with 3 Verandas, Spacious Drawing, Dining & Family Living Room, Highly Decorated Kitchen with Store Room and Servant room with attached Toilet.",
+      "Facilities": ["Swimming Pool", "Gym", "Parking"],
+      "additionalFacilities": " a. Electricity with full generator load, b. Central Gas Geyser, c. 2 Car Parking with 1 Driver’s Accommodation, d. Community Conference Hall, e. Roof Top Beautified Garden and Grassy Ground, f. Cloth Hanging facility with CC camera"
+    }
+  }, 
+  {
+    "id":3,
+    "image": "https://demo.softhopper.studio/house-rent/wp-content/uploads/sites/7/2017/04/demo-image-rental-23.jpg",
+    "title": "Family Apartment Eight",
+    "details":"3000 sq-ft., 3 Bedroom, Semi-furnished, Luxurious, South facing Apartment for Rent in Rangs Malancha, Melbourne.",
+    "location": "Sewden",
+    "bathrooms": 2,
+    "bedrooms": 3,
+    "price": 8000,
+    "priceDetails": {
+      "Month": "$550",
+      "serviceCharge": 8000,
+      "securityDeposit": "3 month’s rent",
+      "flatReleasePolicy": "60 days notice"
+    },
+    "propertyDetails": {
+      "addressArea": "Rangs Malancha, House-68, Road-6A (Dead End Road), Dhanmondi Residential Area.",
+      "flatSize": "3000 sq ft",
+      "Floor": " A5 (5th Floor) (6 storied Building ) (South Facing Unit)",
+      "roomCategory": " 3 Large Bed Rooms with 3 Verandas, Spacious Drawing, Dining & Family Living Room, Highly Decorated Kitchen with Store Room and Servant room with attached Toilet.",
+      "Facilities": ["Swimming Pool", "Modern Lift", "Parking"],
+      "additionalFacilities": " a. Electricity with full generator load, b. Central Gas Geyser, c. 2 Car Parking with 1 Driver’s Accommodation, d. Community Conference Hall, e. Roof Top Beautified Garden and Grassy Ground, f. Cloth Hanging facility with CC camera"
+    }
+  }, 
+  {
+    "id":4,
+    "image": "https://demo.softhopper.studio/house-rent/wp-content/uploads/sites/7/2017/04/demo-image-rental-20-750x500.jpg",
+    "title": "Family Apartment Eight",
+    "details":"3000 sq-ft., 3 Bedroom, Semi-furnished, Luxurious, South facing Apartment for Rent in Rangs Malancha, Melbourne.",
+    "location": "Sewden",
+    "bathrooms": 2,
+    "bedrooms": 3,
+    "price": 8000,
+    "priceDetails": {
+      "Month": "$550",
+      "serviceCharge": 8000,
+      "securityDeposit": "3 month’s rent",
+      "flatReleasePolicy": "60 days notice"
+    },
+    "propertyDetails": {
+      "addressArea": "Rangs Malancha, House-68, Road-6A (Dead End Road), Dhanmondi Residential Area.",
+      "flatSize": "3000 sq ft",
+      "Floor": " A5 (5th Floor) (6 storied Building ) (South Facing Unit)",
+      "roomCategory": " 3 Large Bed Rooms with 3 Verandas, Spacious Drawing, Dining & Family Living Room, Highly Decorated Kitchen with Store Room and Servant room with attached Toilet.",
+      "Facilities": ["Swimming Pool", "Modern Lift", "Parking"],
+      "additionalFacilities": " a. Electricity with full generator load, b. Central Gas Geyser, c. 2 Car Parking with 1 Driver’s Accommodation, d. Community Conference Hall, e. Roof Top Beautified Garden and Grassy Ground, f. Cloth Hanging facility with CC camera"
+    }
+  }, 
+  {
+    "id":5,
+    "image": "https://demo.softhopper.studio/house-rent/wp-content/uploads/sites/7/2017/04/demo-image-rental-29-750x500.jpg",
+    "title": "Family Apartment seven",
+    "details":"3000 sq-ft., 3 Bedroom, Semi-furnished, Luxurious, South facing Apartment for Rent in Rangs Malancha, Melbourne.",
+    "location": "Sewden",
+    "bathrooms": 2,
+    "bedrooms": 3,
+    "price": 8000,
+    "priceDetails": {
+      "Month": "$550",
+      "serviceCharge": 8000,
+      "securityDeposit": "3 month’s rent",
+      "flatReleasePolicy": "60 days notice"
+    },
+    "propertyDetails": {
+      "addressArea": "Rangs Malancha, House-68, Road-6A (Dead End Road), Dhanmondi Residential Area.",
+      "flatSize": "3000 sq ft",
+      "Floor": " A5 (5th Floor) (6 storied Building ) (South Facing Unit)",
+      "roomCategory": " 3 Large Bed Rooms with 3 Verandas, Spacious Drawing, Dining & Family Living Room, Highly Decorated Kitchen with Store Room and Servant room with attached Toilet.",
+      "Facilities": ["Swimming Pool", "Modern Lift", "Parking"],
+      "additionalFacilities": " a. Electricity with full generator load, b. Central Gas Geyser, c. 2 Car Parking with 1 Driver’s Accommodation, d. Community Conference Hall, e. Roof Top Beautified Garden and Grassy Ground, f. Cloth Hanging facility with CC camera"
+    }
+  }, 
+  {
+    "id":6,
+    "image": "https://demo.softhopper.studio/house-rent/wp-content/uploads/sites/7/2017/04/demo-image-rental-05-750x500.jpg",
+    "title": "Family Apartment seven",
+    "details":"3000 sq-ft., 3 Bedroom, Semi-furnished, Luxurious, South facing Apartment for Rent in Rangs Malancha, Melbourne.",
+    "location": "Sewden",
+    "bathrooms": 2,
+    "bedrooms": 3,
+    "price": 8000,
+    "priceDetails": {
+      "Month": "$550",
+      "serviceCharge": 8000,
+      "securityDeposit": "3 month’s rent",
+      "flatReleasePolicy": "60 days notice"
+    },
+    "propertyDetails": {
+      "addressArea": "Rangs Malancha, House-68, Road-6A (Dead End Road), Dhanmondi Residential Area.",
+      "flatSize": "3000 sq ft",
+      "Floor": " A5 (5th Floor) (6 storied Building ) (South Facing Unit)",
+      "roomCategory": " 3 Large Bed Rooms with 3 Verandas, Spacious Drawing, Dining & Family Living Room, Highly Decorated Kitchen with Store Room and Servant room with attached Toilet.",
+      "Facilities": ["Swimming Pool", "Modern Lift", "Parking"],
+      "additionalFacilities": " a. Electricity with full generator load, b. Central Gas Geyser, c. 2 Car Parking with 1 Driver’s Accommodation, d. Community Conference Hall, e. Roof Top Beautified Garden and Grassy Ground, f. Cloth Hanging facility with CC camera"
+    }
+  }, 
+  {
+    "id":7,
+    "image": "https://demo.softhopper.studio/house-rent/wp-content/uploads/sites/7/2017/04/demo-image-rental-21-750x500.jpg",
+    "title": "Family Apartment seven",
+    "details":"3000 sq-ft., 3 Bedroom, Semi-furnished, Luxurious, South facing Apartment for Rent in Rangs Malancha, Melbourne.",
+    "location": "Sewden",
+    "bathrooms": 2,
+    "bedrooms": 3,
+    "price": 8000,
+    "priceDetails": {
+      "Month": "$550",
+      "serviceCharge": 8000,
+      "securityDeposit": "3 month’s rent",
+      "flatReleasePolicy": "60 days notice"
+    },
+    "propertyDetails": {
+      "addressArea": "Rangs Malancha, House-68, Road-6A (Dead End Road), Dhanmondi Residential Area.",
+      "flatSize": "3000 sq ft",
+      "Floor": " A5 (5th Floor) (6 storied Building ) (South Facing Unit)",
+      "roomCategory": " 3 Large Bed Rooms with 3 Verandas, Spacious Drawing, Dining & Family Living Room, Highly Decorated Kitchen with Store Room and Servant room with attached Toilet.",
+      "Facilities": ["Swimming Pool", "Modern Lift", "Parking"],
+      "additionalFacilities": " a. Electricity with full generator load, b. Central Gas Geyser, c. 2 Car Parking with 1 Driver’s Accommodation, d. Community Conference Hall, e. Roof Top Beautified Garden and Grassy Ground, f. Cloth Hanging facility with CC camera"
+    }
+  }, 
+  {
+    "id":8,
+    "image": "https://demo.softhopper.studio/house-rent/wp-content/uploads/sites/7/2017/04/demo-image-rental-22-750x500.jpg",
+    "title": "Family Apartment seven",
+    "details":"3000 sq-ft., 3 Bedroom, Semi-furnished, Luxurious, South facing Apartment for Rent in Rangs Malancha, Melbourne.",
+    "location": "Sewden",
+    "bathrooms": 2,
+    "bedrooms": 3,
+    "price": 8000,
+    "priceDetails": {
+      "Month": "$550",
+      "serviceCharge": 8000,
+      "securityDeposit": "3 month’s rent",
+      "flatReleasePolicy": "60 days notice"
+    },
+    "propertyDetails": {
+      "addressArea": "Rangs Malancha, House-68, Road-6A (Dead End Road), Dhanmondi Residential Area.",
+      "flatSize": "3000 sq ft",
+      "Floor": " A5 (5th Floor) (6 storied Building ) (South Facing Unit)",
+      "roomCategory": " 3 Large Bed Rooms with 3 Verandas, Spacious Drawing, Dining & Family Living Room, Highly Decorated Kitchen with Store Room and Servant room with attached Toilet.",
+      "Facilities": ["Swimming Pool", "Modern Lift", "Parking"],
+      "additionalFacilities": " a. Electricity with full generator load, b. Central Gas Geyser, c. 2 Car Parking with 1 Driver’s Accommodation, d. Community Conference Hall, e. Roof Top Beautified Garden and Grassy Ground, f. Cloth Hanging facility with CC camera"
+    }
+  }
+]

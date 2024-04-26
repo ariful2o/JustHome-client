@@ -1,18 +1,23 @@
 import { useEffect, useState } from "react";
-import ComminBanner from "../components/ComminBanner";
-import { NavLink, useLoaderData } from 'react-router-dom'
-import './Programs.css'
 import { Helmet } from "react-helmet-async";
+import { BiLike } from "react-icons/bi";
+import { FaEye } from "react-icons/fa6";
+import { Link, NavLink, useLoaderData } from 'react-router-dom';
+import ComminBanner from "../components/ComminBanner";
+import './Programs.css';
 
 
 export default function Programs() {
   const programs = useLoaderData();
   const [program, setProgram] = useState([])
-
+  
   useEffect(() => {
     // This function will be called when the component is mounted
     handleSort();
   }, []);
+  if (!Array.isArray(program)) {
+    return <div className="w-full flex justify-center"><span className="loading loading-spinner text-error mx-auto"></span></div>
+  }
 
   const handleSort = (sort) => {
     setProgram(programs)
@@ -25,42 +30,54 @@ export default function Programs() {
     }
   }
 
-
-
-
   const navlinks = <>
-    <NavLink onClick={() => handleSort('all')} activeClassName="active" className="btn  rounded-3xl">All Programs</NavLink>
+    <NavLink onClick={() => handleSort('all')} activeClassName="active" className="btn  rounded-3xl">All Rental</NavLink>
 
-    <NavLink onClick={() => handleSort('Family')} activeClassName="active" className="btn rounded-3xl">Family</NavLink>
+    <NavLink onClick={() => handleSort('Family House')} activeClassName="active" className="btn rounded-3xl">Family House</NavLink>
 
-    <NavLink onClick={() => handleSort('Volunteers')} activeClassName="active" className="btn rounded-3xl">Volunteers</NavLink>
+    <NavLink onClick={() => handleSort('Office')} activeClassName="active" className="btn rounded-3xl">Office</NavLink>
 
-    <NavLink onClick={() => handleSort('Community')} activeClassName="active" className="btn  rounded-3xl">Community</NavLink>
+    <NavLink onClick={() => handleSort('Apartments')} activeClassName="active" className="btn  rounded-3xl">Apartments</NavLink>
 
   </>
   return (
     <div>
       <Helmet>
-        <title>Light School House | Programs</title>
+        <title>House Rent| Rental</title>
       </Helmet>
-      <ComminBanner location={'Programs'}></ComminBanner>
+      <ComminBanner location={'Rental'}></ComminBanner>
       <h2 className="text-5xl text-[#43CEC6] text-center font-black my-10 font-sotify animate__rotateIn animate__animated ">OUR PROGRAMS</h2>
-      <p className="text-3xl italic mb-10 font-sotify text-[#162C5A] text-center animate__animated animate__backInLeft animate__faster">Make a difference life of a <br />child with special needs</p>
+      <p className="text-3xl italic mb-10 font-sotify text-[#162C5A] text-center animate__animated animate__backInLeft animate__faster">Make a difference life of a <br />Your with special needs</p>
 
       <div className="justify-center flex w-full gap-4 my-20 animate__animated animate__lightSpeedInRight animate__fast">
         {navlinks}
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 my-10">
         {
-          program.map((item) => {
+          program.map(item => {
             return (
-              <div key={item.id} className="relative mx-auto hover:rotate-[360deg] duration-1000 animate__backInDown animate__anomated animate__delay-2s">
-                <img src={item.image} className="w-96 h-96 rounded-full opacity-85 " alt={item.title} />
-                <div className="absolute top-[15%] left-1/4">
-                  <img className="mx-auto mb-0 w-32 h-40" src={item.icon} alt="" />
-                  <h3 className="text-3xl font-bold italic text-[#162C5A] text-center font-sotify">{item.title}</h3>
+              <Link key={item.id} to={`/programs/${item.id}`}>
+                <div className="card card-compact w-96 bg-base-100 shadow-xl mx-auto">
+                  <figure className="px-10 pt-10">
+                    <img src={item.image} alt="" className="rounded-xl" />
+                  </figure>
+                  <div className="flex mt-2">
+                    <p className="mx-auto text-[#9D9D9D]">{item.date}</p>|<p className="mx-auto text-[#9D9D9D]">{item.category}</p>
+                  </div>
+                  <div className="mx-auto text-[#9D9D9D]">
+                    <h2 className="card-title my-4 text-[#162C5A] font-sotify">{item.title}</h2>
+
+                    <div className="divider"></div>
+                    <div className="flex gap-2 items-center text-center py-4">
+                      <BiLike />
+                      <p className="mr-4">{item.like} Likes</p>
+                      <FaEye />
+                      <p>{item.view} Views</p>
+                    </div>
+                  </div>
+
                 </div>
-              </div>
+              </Link>
             )
           })
         }

@@ -7,17 +7,17 @@ export default function Scholarships() {
   return (
     <div>
       <Helmet>
-        <title>Light School House | Schilarships</title>
+        <title>House Rent| Services</title>
       </Helmet>
-      <ComminBanner location={'Scholarships'}></ComminBanner>
+      <ComminBanner location={'Services'}></ComminBanner>
       <div className="bg-[#43CEC9] text-center">
-        <h1 className="text-4xl font-black text-white py-5">ADMISSIONS PROCESS </h1>
-        <p className="text-2xl font-sotify text-[#162C5A]">With a focus on whole child development and individualized programs</p>
+        <h1 className="text-4xl font-black text-white py-5">Our Services</h1>
+        <p className="text-2xl font-sotify text-[#162C5A]">With a focus on whole child development and individualized services</p>
 
         <div className="flex flex-col lg:flex-row gap-8 justify-center my-20">
           <div className="card w-full lg:w-96 bg-base-100 shadow-xl">
             <figure className="lg:px-10 pt-10">
-              <img src="https://lighthouse.ancorathemes.com/wp-content/uploads/2017/06/post-12-370x233.jpg" alt="" className="rounded-xl" />
+              <img src="https://elementor.emjecreative.com/architecto/wp-content/uploads/sites/5/2023/08/image-QDVLVDA.jpg" alt="" className="rounded-xl" />
             </figure>
             <div className="card-body items-center text-center">
               <h2 className="card-title font-sotify text-[#162C5A]">Exchange Information</h2>
@@ -26,7 +26,7 @@ export default function Scholarships() {
           </div>
           <div className="card w-full lg:w-96 bg-base-100 shadow-xl">
             <figure className="lg:px-10 pt-10">
-              <img src="https://lighthouse.ancorathemes.com/wp-content/uploads/2017/06/post-4-370x233.jpg " alt="" className="rounded-xl" />
+              <img src="https://elementor.emjecreative.com/architecto/wp-content/uploads/sites/5/2023/08/asian-colleague-workers-people-wearing-protective-WH7JLAZ.jpg" alt="" className="rounded-xl" />
             </figure>
             <div className="card-body items-center text-center">
               <h2 className="card-title font-sotify text-[#162C5A]">Tour Intake Evaluation</h2>
@@ -35,7 +35,7 @@ export default function Scholarships() {
           </div>
           <div className="card w-full lg:w-96 bg-base-100 shadow-xl">
             <figure className="lg:px-10 pt-10">
-              <img src="https://lighthouse.ancorathemes.com/wp-content/uploads/2017/06/post-15-370x233.jpg" alt="" className="rounded-xl" />
+              <img src="https://elementor.emjecreative.com/architecto/wp-content/uploads/sites/5/2023/08/image-C6HGQRS-2048x974.jpg" alt="" className="rounded-xl" />
             </figure>
             <div className="card-body items-center text-center">
               <h2 className="card-title font-sotify text-[#162C5A]">Eligibility</h2>
@@ -45,64 +45,102 @@ export default function Scholarships() {
         </div>
       </div>
       <div className="">
-        <h2 className="text-center text-[#43CEC6] font-black text-4xl">WHAT YOU WILL NEED</h2>
-        <p className="text-xl text-center font-sotify text-[#162C5A]">We work really hard to make sure we can offer each student exactly what they need</p>
+        <h2 className="text-center text-[#43CEC6] font-black text-4xl">what we offering</h2>
+        <p className="text-xl text-center font-sotify text-[#162C5A]">We work really hard to make sure we can offer each You exactly what they need</p>
 
-        <div className="flex flex-col lg:flex-row justify-center gap-20 my-10">
-          <div className="w-28">
-            <span className="px-1 py-7 my-2 rounded-full bg-[#FFD223] text-4xl block text-center font-black">1</span>
-            <div className="text-center text-[#A1A1A1]">JSA CLINICAL GROUP INTAKE FORMS</div>
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-20 m-10">
+          <div className="card w-72 bg-base-200 mx-auto">
+            <div className="card-body items-center text-center">
+              <h2 className="card-title text-4xl font-sotify my-8 text-[#D6C8B7]">01</h2>
+              <h2 className="card-title text-[#B19784]">Architecture</h2>
+              <p className="text-[#888AAA]">Cras mollis turpis a ipsum ultes, nec cond imentum ipsum consequat mollis turpis.</p>
+              <div className="card-actions justify-center">
+                <button className="btn btn-ghost text-[#717171]">Read More</button>
+              </div>
+            </div>
           </div>
-          <div className="w-28">
-            <span className="px-1 py-7 my-2 rounded-full bg-[#FFD223] text-4xl block text-center font-black">2</span>
-            <div className="text-center text-[#A1A1A1]">CURRENT INDIVIDUALIZED EDUCATION PLAN</div>
+
+          <div className="card w-72 bg-base-200 mx-auto">
+            <div className="card-body items-center text-center">
+              <h2 className="card-title text-4xl font-sotify my-8 text-[#D6C8B7]">02</h2>
+              <h2 className="card-title text-[#B19784]">Interior Design</h2>
+              <p className="text-[#888AAA]">Cras mollis turpis a ipsum ultes, nec cond imentum ipsum consequat mollis turpis.</p>
+              <div className="card-actions justify-center">
+                <button className="btn btn-ghost text-[#717171]">Read More</button>
+              </div>
+            </div>
           </div>
-          <div className="w-28">
-            <span className="px-1 py-7 my-2 rounded-full bg-[#FFD223] text-4xl block text-center font-black">3</span>
-            <div className="text-center text-[#A1A1A1]">RECENT ASSESSMENTS</div>
+
+          <div className="card w-72 bg-base-200 mx-auto">
+            <div className="card-body items-center text-center">
+              <h2 className="card-title text-4xl font-sotify my-8 text-[#D6C8B7]">03</h2>
+              <h2 className="card-title text-[#B19784]">Structure</h2>
+              <p className="text-[#888AAA]">Cras mollis turpis a ipsum ultes, nec cond imentum ipsum consequat mollis turpis.</p>
+              <div className="card-actions justify-center">
+                <button className="btn btn-ghost text-[#717171]">Read More</button>
+              </div>
+            </div>
           </div>
-          <div className="w-28">
-            <span className="px-1 py-7 my-2 rounded-full bg-[#FFD223] text-4xl block text-center font-black">4</span>
-            <div className="text-center text-[#A1A1A1]">ABA TREATMENT PLANS WITH GOALS</div>
+          <div className="card w-72 bg-base-200 mx-auto">
+            <div className="card-body items-center text-center">
+              <h2 className="card-title text-4xl font-sotify my-8 text-[#D6C8B7]">04</h2>
+              <h2 className="card-title text-[#B19784]">Visualization</h2>
+              <p className="text-[#888AAA]">Cras mollis turpis a ipsum ultes, nec cond imentum ipsum consequat mollis turpis.</p>
+              <div className="card-actions justify-center">
+                <button className="btn btn-ghost text-[#717171]">Read More</button>
+              </div>
+            </div>
           </div>
-          <div className="w-28">
-            <span className="px-1 py-7 my-2 rounded-full bg-[#FFD223] text-4xl block text-center font-black">5</span>
-            <div className="text-center text-[#A1A1A1]">PAST BEHAVIOR PLANS AND REPORTS</div>
+          <div className="card w-72 bg-base-200 mx-auto">
+            <div className="card-body items-center text-center">
+              <h2 className="card-title text-4xl font-sotify my-8 text-[#D6C8B7]">05</h2>
+              <h2 className="card-title text-[#B19784]">Landscape</h2>
+              <p className="text-[#888AAA]">Cras mollis turpis a ipsum ultes, nec cond imentum ipsum consequat mollis turpis.</p>
+              <div className="card-actions justify-center">
+                <button className="btn btn-ghost text-[#717171]">Read More</button>
+              </div>
+            </div>
           </div>
-          <div className="w-28">
-            <span className="px-1 py-7 my-2 rounded-full bg-[#FFD223] text-4xl block text-center font-black">6</span>
-            <div className="text-center text-[#A1A1A1]">ANY OTHER DOCUMENTATION</div>
+          <div className="card w-72 bg-base-200 mx-auto">
+            <div className="card-body items-center text-center">
+              <h2 className="card-title text-4xl font-sotify my-8 text-[#D6C8B7]">06</h2>
+              <h2 className="card-title text-[#B19784]">Structure</h2>
+              <p className="text-[#888AAA]">Cras mollis turpis a ipsum ultes, nec cond imentum ipsum consequat mollis turpis.</p>
+              <div className="card-actions justify-center">
+                <button className="btn btn-ghost text-[#717171]">Read More</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
       <div className="my-20">
-        <h2 className="text-center text-[#43CEC6] font-black text-4xl">SCHOLARSHIPS</h2>
-        <p className="text-xl text-center font-sotify text-[#162C5A]">Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper</p>
+        <h2 className="text-center text-[#43CEC6] font-black text-4xl">Latest News</h2>
+        <p className="text-xl text-center font-sotify text-[#162C5A]">What it’s like to be an interior innovative designer?</p>
 
         <div className="flex flex-col lg:flex-row gap-16 my-9 justify-center">
           <div className="w-[467px]  shadow-xl">
             <div className="flex">
-              <img className="w-1/2 h-56" src="https://lighthouse.ancorathemes.com/wp-content/uploads/2017/06/post-5-1170x658.jpg" alt="" />
+              <img className="w-1/2 h-56" src="https://kitss.themescamp.com/archo/wp-content/uploads/sites/2/2020/06/port2-3.jpg" alt="" />
               <div className="flex flex-col items-center justify-center ml-8">
-                <h2 className="text-2xl font-sotify">The Gardiner Scholarship</h2>
+                <h2 className="text-2xl font-sotify"> Mark Finlay Architects And Interiors</h2>
                 <button className="mt-9 text-[#a1a1a1]">Read more</button>
               </div>
             </div>
           </div>
           <div className="w-[467px] shadow-xl">
             <div className="flex">
-              <img className="w-1/2 h-56" src="https://lighthouse.ancorathemes.com/wp-content/uploads/2017/06/post-16-1170x658.jpg" alt="" />
+              <img className="w-1/2 h-56" src="https://kitss.themescamp.com/archo/wp-content/uploads/sites/2/2020/06/port5-1.jpg" alt="" />
               <div className="flex flex-col items-center justify-center ml-8">
-                <h2 className="text-2xl font-sotify">The McKay Scholarship</h2>
+                <h2 className="text-2xl font-sotify">You Should Know About Modern Furniture.</h2>
                 <button className="mt-9 text-[#a1a1a1]">Read more</button>
               </div>
             </div>
           </div>
         </div>
-        <button className="mx-auto block my-4 rounded-3xl bg-[#FFD223] px-8 py-3">MORE SCHOLARSHIPS</button>
+        <button className="mx-auto block my-4 rounded-3xl bg-[#ccbe86] px-8 py-3">MORE</button>
       </div>
-      <BannerImg/>
+      <BannerImg />
     </div>
 
   )

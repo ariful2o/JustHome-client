@@ -1,12 +1,12 @@
+import { sendEmailVerification, updateProfile } from "firebase/auth";
 import { useContext, useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
 import { Link, useNavigate } from "react-router-dom";
-import { AuthContext } from "../authProvider/AuthProvider";
-import { sendEmailVerification, updateProfile } from "firebase/auth";
-import auth from "../firebase/firebase.init";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { Helmet } from "react-helmet-async";
+import { AuthContext } from "../authProvider/AuthProvider";
+import auth from "../firebase/firebase.init";
 
 
 export default function Register() {
@@ -105,7 +105,7 @@ export default function Register() {
     return (
         <div className="max-h-svh  ">
             <Helmet>
-                <title>Light School House | Register</title>
+                <title>House Rent| Register</title>
             </Helmet>
             <ToastContainer />
             <div className="card shrink-0 w-full max-w-2xl shadow-2xl bg-base-100   top-20 left-1/4">

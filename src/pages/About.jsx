@@ -1,10 +1,8 @@
-import { Marker, Popup } from "leaflet";
 import PropTypes from 'prop-types';
-import { MapContainer, TileLayer } from 'leaflet';
+import { Helmet } from "react-helmet-async";
 import BannerImg from "../components/BannerImg";
 import ComminBanner from "../components/ComminBanner";
 import Map from "../components/Map";
-import { Helmet } from "react-helmet-async";
 
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
@@ -17,18 +15,63 @@ export default function About() {
     <>
       <ComminBanner location={'About'}></ComminBanner>
       <Helmet>
-        <title>Light School House | About</title>
+        <title>House Rent| About</title>
       </Helmet>
 
       <div className="flex flex-col lg:flex-row lg:p-10 mx-auto">
         <div className="max-w-2xl lg:p-20">
-          <h1 className="text-5xl font-bold font-sotify text-[#43CEC6] my-6 text-center animate__animated animate__backInDown">SAY HELLO!</h1>
+          <h1 className="text-5xl font-bold font-sotify text-[#43CEC6] my-6 text-center animate__animated animate__backInDown">Best Rent Service enjoy your life</h1>
           <h4 className="text-2xl italic font-semibold font-sotify text-[#162C5A] lg:max-w-md p-9 animate__animated animate__backInLeft animate__delay-1s">Make a difference in the life of a child with special needs, create an inclusive community and improve yourself!</h4>
-          <small className="text-[#ADA4A1] my-8 block text-sm animate__animated animate__backInLeft animate__delay-2s">Types of special needs vary in severity. People with autism, Down syndrome, dyslexia, blindness, ADHD, or cystic fibrosis, for example, may be considered to have special needs. However, special needs can also include cleft lips, or missing limbs.</small>
+          <small className="text-[#ADA4A1] my-8 block text-sm animate__animated animate__backInLeft animate__delay-2s">Sed pellentesque pulvinar arcu ac congue. Sed sed est nec justo maximus blandit. Curabitur lacinia, eros sit amet maximus suscipit, magna sapien veneuynatis eros, et gravida urna massa ut lectus. Quisque lacinia laciunia viverra. Nullram nec est et lorem sodales ornare a in sapien. In trtset urna marximus, conse ctetur iligula in, gravida erat. Nullam digniifssrim hendrerit auctor. Sed varius, dolor vitae iaculis condim rtweentum, massa nisl cursus sapien, gravida ultrices nisi dolor non erat.</small>
           <button className="btn bg-[#FFD223] rounded-2xl animate__animated animate__backInLeft animate__delay-2s">More About Us</button>
         </div>
         <div className="animate__fadeInRight animate__animated animate__delay-1s">
-          <img src='https://lighthouse.ancorathemes.com/wp-content/uploads/2017/06/img_hello2.jpg' alt="" />
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="grid gap-4">
+              <div>
+                <img className="h-full w-full rounded-lg" src="https://demo.softhopper.studio/house-rent/wp-content/uploads/sites/7/2017/04/gallery-9-150x150.jpg" alt="" />
+              </div>
+              <div>
+                <img className="h-full w-full rounded-lg" src="https://demo.softhopper.studio/house-rent/wp-content/uploads/sites/7/2017/04/gallery-10.jpg" alt="" />
+              </div>
+              <div>
+                <img className="h-full w-full rounded-lg" src="https://demo.softhopper.studio/house-rent/wp-content/uploads/sites/7/2017/04/gallery-11-150x150.jpg" alt="" />
+              </div>
+            </div>
+            <div className="grid gap-4">
+              <div>
+                <img className="h-full w-full rounded-lg" src="https://demo.softhopper.studio/house-rent/wp-content/uploads/sites/7/2017/04/gallery-8-150x150.jpg" alt="" />
+              </div>
+              <div>
+                <img className="h-full w-full rounded-lg" src="https://demo.softhopper.studio/house-rent/wp-content/uploads/sites/7/2017/04/gallery-7-150x150.jpg" alt="" />
+              </div>
+              <div>
+                <img className="h-full w-full rounded-lg" src="https://demo.softhopper.studio/house-rent/wp-content/uploads/sites/7/2017/04/demo-image-rental-12-311x232.jpg" alt="" />
+              </div>
+            </div>
+            <div className="grid gap-4">
+              <div>
+                <img className="h-full w-full rounded-lg" src="https://demo.softhopper.studio/house-rent/wp-content/uploads/sites/7/2017/04/demo-image-rental-06-311x232.jpg" alt="" />
+              </div>
+              <div>
+                <img className="h-full w-full rounded-lg" src="https://demo.softhopper.studio/house-rent/wp-content/uploads/sites/7/2017/04/demo-image-rental-05.jpg" alt="" />
+              </div>
+              <div>
+                <img className="h-full w-full rounded-lg" src="https://demo.softhopper.studio/house-rent/wp-content/uploads/sites/7/2017/04/demo-image-rental-01-360x270.jpg" alt="" />
+              </div>
+            </div>
+            <div className="grid gap-4">
+              <div>
+                <img className="h-full w-full rounded-lg" src="https://demo.softhopper.studio/house-rent/wp-content/uploads/sites/7/2017/04/about-image-443x334.png" alt="" />
+              </div>
+              <div>
+                <img className="h-full w-full rounded-lg" src="https://demo.softhopper.studio/house-rent/wp-content/uploads/sites/7/2017/04/demo-image-rental-36-360x270.jpg" alt="" />
+              </div>
+              <div>
+                <img className="h-full w-full rounded-lg" src="https://demo.softhopper.studio/house-rent/wp-content/uploads/sites/7/2017/04/demo-image-rental-37-360x270.jpg" alt="" />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div className="text-center">
@@ -37,42 +80,43 @@ export default function About() {
           support, friendship and inclusion that they deserve.</h4>
 
         <div className="flex flex-col lg:flex-row justify-around">
-          <div className="card w-full lg:w-96 bg-base-100 shadow-xl">
+          <div className="card w-full h-full lg:w-96 bg-base-100 shadow-xl">
             <figure className="lg:px-10 pt-10">
-              <img src="https://lighthouse.ancorathemes.com/wp-content/uploads/2017/06/post-7-740x466.jpg" alt="" className="rounded-xl" />
+              <img src="https://demo.softhopper.studio/house-rent/wp-content/uploads/sites/7/2017/04/demo-image-rental-16-360x232.jpg" alt="" className="rounded-xl" />
             </figure>
             <div className="card-body items-center text-center">
               <h2 className="card-title font-sotify">Our Mission</h2>
-              <p className="my-6">Lighthouse founded upon the idea that within each person is a soul; and that soul is equal and worthy of boundless love.</p>
+              <p className="my-6">Amorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae nibh nisl. Cras etitikis mauris egeth lorem ultricies ferme is ntum a inti diam. Morbi mollis pellden tesque offs aiug ueia nec rhoncus. Nam ute ultricies. Cras etitikis mauris eget lorem ultricies ferme ntum a inti diam.</p>
               <div className="card-actions">
                 <button className="btn bg-[#FFD223] rounded-3xl px-5">DETAILS</button>
               </div>
             </div>
           </div>
-          <div className="card w-full lg:w-96 bg-base-100 shadow-xl">
+          <div className="card w-full h-full lg:w-96 bg-base-100 shadow-xl">
             <figure className="lg:px-10 pt-10">
-              <img src="https://lighthouse.ancorathemes.com/wp-content/uploads/2017/06/post-6-740x466.jpg" alt="" className="rounded-xl" />
-            </figure>
-            <div className="card-body items-center text-center">
-              <h2 className="card-title font-sotify">What We Do</h2>
-              <p className="my-6">Lighthouse founded upon the idea that within each person is a soul; and that soul is equal and worthy of boundless love.</p>
-              <div className="card-actions">
-                <button className="btn bg-[#FFD223] rounded-3xl px-5">DETAILS</button>
-              </div>
-            </div>
-          </div>
-          <div className="card w-full lg:w-96 bg-base-100 shadow-xl">
-            <figure className="lg:px-10 pt-10">
-              <img src="https://lighthouse.ancorathemes.com/wp-content/uploads/2017/06/post-8-740x466.jpg" alt="" className="rounded-xl" />
+              <img src="https://demo.softhopper.studio/house-rent/wp-content/uploads/sites/7/2017/04/apartment-ad.png" alt="" className="rounded-xl" />
             </figure>
             <div className="card-body items-center text-center">
               <h2 className="card-title font-sotify">Our Values</h2>
-              <p className="my-6">Lighthouse founded upon the idea that within each person is a soul; and that soul is equal and worthy of boundless love.</p>
+              <p className="my-6">House Rent founded upon the idea that within each person is a soul; and that soul is equal and worthy of boundless love.</p>
               <div className="card-actions">
                 <button className="btn bg-[#FFD223] rounded-3xl px-5">DETAILS</button>
               </div>
             </div>
           </div>
+          <div className="card w-full lg:w-96 bg-base-100 shadow-xl">
+            <figure className="lg:px-10 pt-10">
+              <img src="https://demo.softhopper.studio/house-rent/wp-content/uploads/sites/7/2017/04/slider-show.png" alt="" className="rounded-xl" />
+            </figure>
+            <div className="card-body items-center text-center">
+              <h2 className="card-title font-sotify">What We Do</h2>
+              <p className="my-6">House Rent founded upon the idea that within each person is a soul; and that soul is equal and worthy of boundless love.</p>
+              <div className="card-actions">
+                <button className="btn bg-[#FFD223] rounded-3xl px-5">DETAILS</button>
+              </div>
+            </div>
+          </div>
+          
         </div>
       </div>
       <BannerImg />
@@ -83,7 +127,7 @@ export default function About() {
 
         <div className="grid grid-cols-2 lg:grid-cols-4 p-0  lg:p-14">
           <div className="lg:w-44">
-            <img className="w-32 mx-auto rounded-full" src="https://lighthouse.ancorathemes.com/wp-content/uploads/2017/06/team1-760x760.jpg" />
+            <img className="w-32 mx-auto rounded-full" src="https://demo.softhopper.studio/house-rent/wp-content/uploads/sites/7/2017/04/about-page-johan-214x214.png" />
             <h2 className="text-center text-[#162C5A] my-3 font-bold hover:text-[#FFD223]">Janet Green</h2>
             <p className="text-white text-sm text-center font-sotify">EXECUTIVE DIRECTOR</p>
           </div>
