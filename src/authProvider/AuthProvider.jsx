@@ -47,7 +47,7 @@ export default function AuthProvider({ children }) {
       const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
         setUser(currentUser)
         setLoading(false)
-        console.log('>----------->', currentUser)
+        console.log('CURRENT-USER', currentUser)
       })
       return () => unSubscribe()
     }, [user])

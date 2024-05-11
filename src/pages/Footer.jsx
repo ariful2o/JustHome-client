@@ -6,7 +6,7 @@ export default function Footer() {
             <aside>
                 <img src="https://lighthouse.ancorathemes.com/wp-content/uploads/2017/06/lighthouse.png" alt="" />
                 <p className="font-bold">
-                    House Rent. <br />Providing reliable tech since 1998
+                    JustHome. <br />Providing reliable tech since 1998
                 </p>
                 <p>Copyright © 2024 - All right reserved</p>
             </aside>

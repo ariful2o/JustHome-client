@@ -2,7 +2,8 @@ import { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../authProvider/AuthProvider";
 import auth from "../firebase/firebase.init";
-import '../pages/Programs.css';
+import '../components/Navbar.css'
+import logo from '../assets/icons/logo.svg fill.png'
 
 export default function Navbar() {
     const { user, signout } = useContext(AuthContext);
@@ -12,7 +13,7 @@ export default function Navbar() {
 
     const handleThemes = (e) => {
         if (e.target.checked) {
-            setTheme('synthwave');
+            setTheme('dark');
         } else {
             setTheme('light');
         }
@@ -21,14 +22,19 @@ export default function Navbar() {
     //navlinks
     const navlinks = <>
         <NavLink to='/' activeClassName="active" >Home</NavLink>
+        <NavLink to='/residential' activeClassName="active" >Residential</NavLink>
         <NavLink to='/about' activeClassName="active" >About Us</NavLink>
-        <NavLink to='/programs' activeClassName="active" >Rental</NavLink>
-        <NavLink to='/newsEvents' activeClassName="active" >Residential</NavLink>
-        {user &&
-            <><NavLink to='/scholarships' activeClassName="active" className="nav-link">Services</NavLink>
-            <NavLink to='/profile' activeClassName="active">Profile</NavLink>
-            <NavLink to='/updateprofile' activeClassName="active">Update Profile</NavLink></>
-          
+        <NavLink to='/news' activeClassName="active" >News & Event</NavLink>
+        {user ?
+            <>
+                <NavLink to='/profile' activeClassName="active">Profile</NavLink>
+                <NavLink to='/updateprofile' activeClassName="active">Update Profile</NavLink>
+            </>
+            : <>
+                <NavLink to='/login' activeClassName="active">Login</NavLink>
+                <NavLink to='/register' activeClassName="active">Register</NavLink>
+            </>
+
         }
     </>
 
@@ -36,7 +42,7 @@ export default function Navbar() {
     useEffect(() => {
         document.querySelector('html').setAttribute('data-theme', theme);
     }, [theme]);
-    
+
     //profile image show 
     useEffect(() => {
         const userr = auth.currentUser;
@@ -69,11 +75,10 @@ export default function Navbar() {
                     </ul>
                 </div>
                 <div className="relative hidden lg:flex">
-                    <div className="flex flex-row">
-                        <img className="w-10 h-10" src="https://lighthouse.ancorathemes.com/wp-content/uploads/2017/06/lighthouse.png" alt="" />
-                        <a className="btn btn-ghost text-xl font-sotify">House Rent</a>
+                    <div className="">
+                        <img src={logo} alt="" />
                     </div>
-                   
+
                 </div>
             </div>
             <div className="navbar-center hidden lg:flex">
@@ -100,7 +105,7 @@ export default function Navbar() {
                         </span>
                     </NavLink>
                 }
-                {user ? <a onClick={signout} className="btn mx-4 bg-neutral-content opacity-90">LOGOUT</a> : <Link to='/login' className="btn">LOGIN</Link>}
+                {user ? <a onClick={signout} className="btn mx-4 bg-neutral-content opacity-90">LOGOUT</a> : <Link to='/login' className="btn btn-error btn-outline mx-4">LOGIN</Link>}
             </div>
         </div>
     );

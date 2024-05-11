@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom"
 import { PropTypes } from "prop-types"
-
+import image from '../assets/banner/Biko — One Page Template.png'
 export default function ComminBanner({ location }) {
   return (
-    <div className="hero max-h-60" style={{ backgroundImage: 'url(https://elementor.emjecreative.com/architecto/wp-content/uploads/sites/5/2023/08/diverse-team-of-specialists-with-computer-on-const-TXZ479D.jpg)' }}>
+    <div className="hero max-h-60" style={{ backgroundImage: `url(${image})` }}>
       <div className="hero-overlay bg-opacity-60"></div>
       <div className="hero-content text-center text-neutral-content">
         <div className="max-w-md my-16">

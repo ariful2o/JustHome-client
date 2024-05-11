@@ -1,16 +1,17 @@
-
+import { Link } from 'react-router-dom'
+import img5 from '../assets/slider/Rectangle 34624193.png'
 export default function BannerImg() {
     return (
-        <div className="hero min-h-screen" style={{ backgroundImage: `url('https://kitss.themescamp.com/archo/wp-content/uploads/sites/2/2020/06/S7-3.jpg')` }}>
+        <div className="hero min-h-[500px]" style={{ backgroundImage: `url(${img5})` }}>
             <div className="hero-overlay bg-opacity-60"></div>
             <div className="hero-content text-center text-neutral-content">
                 <div className="max-w-md">
-                    <h1 className="mb-5 text-5xl font-bold font-sotify">Everyone <span className="text-[#FFD223] italic">can </span>
-                        make a difference
-
-                    </h1>
-                   
-                    <button className="btn bg-[#FFD223] px-8 rounded-3xl my-20">Become a Volunteer</button>
+                    <h1 className="mb-5 text-5xl font-bold font-sotify">Discover a place you&apos;ll love to live</h1>
+                    <p>Pellentesque egestas elementum egestas faucibus sem. Velit nunc
+                        egestas ut morbi. Leo diam diam</p>
+                    <Link to='/residential'>
+                        <button className="btn bg-[#FFD223] px-8 rounded-3xl my-20 opacity-70">View Properties</button>
+                    </Link>
                 </div>
             </div>
         </div>
